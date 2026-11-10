@@ -55,26 +55,26 @@ orchestrateur:
 experiences:
   principal:
     variante: standard
-    par_cellule_agents: 1        # sous-ensemble stratifié évalué par les agents : 6 procédés x 6 longueurs = 36
-                                 # chiffrés x 3 répétitions (la référence (a) est évaluée sur les 180)
-    longueurs_agents: null       # toutes les longueurs
+    par_cellule_agents: 1        # agents : 6 procédés x 2 longueurs (150 et 1 000 lettres) = 12 chiffrés
+    longueurs_agents: [150, 1000] # x 3 répétitions ; la référence (a) est évaluée sur les 180 chiffrés
   robustesse:
     variantes: [sans_espaces, fautes5, anglais]
     configurations: [a_baseline, b_qwen3_4b]
+    variantes_agents: [sans_espaces]   # référence (a) : les 3 variantes sur 180 chiffrés ; agents : sans espaces
     par_cellule_agents: 1
-    longueurs_agents: [150, 600] # agents : 6 procédés x 2 longueurs = 12 chiffrés par variante (référence : 180)
+    longueurs_agents: [600]      # agents : 6 procédés x 600 lettres = 6 chiffrés x 3 répétitions
   defaillances:
     configuration: b_qwen3_4b
     taux_fautes_llm: 0.25
     taux_fautes_outils: 0.15
     par_cellule: 1
-    longueurs: [150, 600]        # 12 chiffrés
+    longueurs: [600]             # 6 chiffrés x 3 répétitions
     repetitions: 3
   injection:                     # modèle de menace M1/M2 : consigne malveillante dans une sortie d'outil
     configuration: b_qwen3_4b
     procedes: [autoclave, beaufort, substitution]   # procédés où des candidats faux sont examinés
     par_cellule: 1
-    longueurs: [150, 600, 2000]  # 9 chiffrés x 3 répétitions
+    longueurs: [600]             # 3 chiffrés (autoclave, beaufort, substitution) x 3 répétitions
   explications:
     configuration: b_qwen3_4b
     nombre: 10                   # tirées au hasard (graine) parmi le corpus principal, notées par grille
@@ -84,7 +84,7 @@ experiences:
     echantillons: 20
   longueur_min:                  # longueur minimale de succès à 90 % (en lettres) pour chaque procédé
     longueurs_texte: [20, 30, 40, 60, 80, 100, 150, 200, 300, 400, 600, 800, 1000, 1500, 2000]
-    echantillons: 20             # attaque adaptée, procédé connu
-    echantillons_reference: 10   # référence (a), procédé inconnu
+    echantillons: 10             # attaque adaptée, procédé connu
+    echantillons_reference: 5    # référence (a), procédé inconnu
   kasiski_autoclave:
     par_cellule: 5

@@ -25,6 +25,7 @@ echo   5. Interface graphique dans le navigateur
 echo   6. Rejouer un chiffre du corpus et voir les traces
 echo   7. Evaluation reduite, 15 a 30 min
 echo   8. Evaluation complete, longue, reprenable
+echo   9. Publier les resultats sur GitHub (apres l'option 8)
 echo   0. Quitter
 echo.
 set "choix="
@@ -37,6 +38,7 @@ if "%choix%"=="5" goto :demo
 if "%choix%"=="6" goto :rejouer
 if "%choix%"=="7" goto :petite
 if "%choix%"=="8" goto :complete
+if "%choix%"=="9" goto :publier
 if "%choix%"=="0" exit /b 0
 goto :menu
 
@@ -95,6 +97,25 @@ uv run vsquad environnement
 uv run vsquad evaluer
 uv run vsquad metriques
 uv run vsquad site
+goto :pause
+
+:publier
+where git >nul 2>nul
+if not %errorlevel%==0 (
+  echo Git est absent : lancer installer.bat
+  goto :pause
+)
+if not exist ".git" (
+  echo Ce dossier n'est pas une copie GitHub : utiliser git clone, voir docs\GUIDE_PUBLICATION.md
+  goto :pause
+)
+git config user.name >nul 2>nul || git config user.name "Dawid Rozanski"
+git config user.email >nul 2>nul || git config user.email "294117995+drozanski75@users.noreply.github.com"
+git pull --rebase
+git add results traces site data\corpus config
+git commit -m "Resultats de l'evaluation complete"
+git push
+echo Resultats envoyes sur GitHub (si une fenetre de connexion GitHub s'ouvre, valider).
 goto :pause
 
 :pause

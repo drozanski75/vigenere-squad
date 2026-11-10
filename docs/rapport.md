@@ -212,10 +212,11 @@ lettres du clair remplacées au hasard avant chiffrement), `anglais`
 | c_qwen3_1.7b | système multi-agents, Qwen3 1,7B (taille différente) |
 
 La référence est évaluée sur les {{n_corpus}} chiffrés ; les agents, dont le coût
-est plus élevé sur CPU, sur un sous-ensemble stratifié de {{n_agents}} chiffrés
-(1 par procédé et par longueur ; 12 chiffrés aux longueurs 150 et 600 pour la robustesse et les
-défaillances, 9 pour l'injection de consignes). Ce dimensionnement découle de la vitesse mesurée sur la
-machine de l'auteur (≈ 20 s par appel au modèle, ≈ 6 appels par chiffré). Pour une comparaison appariée, la référence est
+est plus élevé, sur un sous-ensemble stratifié de {{n_agents}} chiffrés (un par procédé, aux longueurs
+150 et 1 000 lettres ; 6 chiffrés de 600 lettres pour la robustesse « sans espaces » et les
+défaillances, 3 pour l'injection de consignes). Ce dimensionnement découle de la vitesse mesurée sur la
+machine de l'auteur (≈ 20 s par appel au modèle, ≈ 6 appels par chiffré) et du délai de remise ; la
+référence couvre les trois variantes de robustesse sur les 180 chiffrés. Pour une comparaison appariée, la référence est
 aussi rapportée sur ce même sous-ensemble. Chaque mesure est répétée 3 fois
 (graine du modèle `42 × 1000 + répétition`, température 0,3) et rapportée en
 moyenne ± écart type.

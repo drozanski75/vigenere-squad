@@ -212,7 +212,7 @@ def config_petite(cfg: dict) -> dict:
     ex = c["experiences"]
     ex["principal"]["par_cellule_agents"] = ci["par_cellule"]
     ex["robustesse"].update(variantes=["sans_espaces"], configurations=["a_baseline", nom_ci], par_cellule_agents=1,
-                            longueurs_agents=None)
+                            longueurs_agents=None, variantes_agents=["sans_espaces"])
     ex["principal"]["longueurs_agents"] = None
     ex["defaillances"]["longueurs"] = None
     ex["injection"]["longueurs"] = None
@@ -252,7 +252,9 @@ def experience_robustesse(cfg: dict, simule: bool = False, configs: list[str] | 
                     continue
                 conf = cfg["configurations"][nom]
                 if conf["type"] == "agents" and variante == "anglais" and langue == "en":
-                    continue  # le système est conçu pour le français : seule la référence teste le modèle anglais
+                    continue
+                if conf["type"] == "agents" and variante not in ex.get("variantes_agents", ex["variantes"]):
+                    continue  # robustesse des agents limitée aux variantes déclarées  # le système est conçu pour le français : seule la référence teste le modèle anglais
                 sel = c if conf["type"] == "baseline" else sous_ensemble(c, ex["par_cellule_agents"],
                                                                           ex.get("longueurs_agents"))
                 for rep in range(cfg["repetitions"]):
