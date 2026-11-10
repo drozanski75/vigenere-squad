@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.coverage
+coverage.xml
+build/
+results/publie/
+traces/cli/
+traces/rejeu/
+docs/rapport_rendu.md
+# Clés secrètes : ne jamais publier
+*.key
+.minisign/
+data/models/

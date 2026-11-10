@@ -1,0 +1,10 @@
+# Fins de ligne LF sur tous les systèmes (empreintes SHA-256 identiques sous Windows, macOS, Linux)
+* text=auto eol=lf
+# Textes sources Gutenberg : octets intacts (empreintes épinglées dans data/sources.json)
+data/raw/** -text
+*.png binary
+*.pdf binary
+*.npy binary
+*.minisig -text
+# Scripts Windows : fins de ligne CRLF obligatoires pour cmd.exe
+*.bat text eol=crlf

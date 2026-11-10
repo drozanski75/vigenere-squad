@@ -1,0 +1,15 @@
+{
+  "description": "Textes du domaine public (Project Gutenberg), miroir GITenberg sur GitHub. Empreintes SHA-256 épinglées : tout écart fait échouer `make data`.",
+  "miroir": "https://raw.githubusercontent.com/GITenberg",
+  "textes": [
+    {"id": 5711, "titre": "Germinal", "auteur": "Émile Zola", "langue": "fr", "role": "apprentissage", "chemin": "Germinal_5711/master/5711-8.txt", "fichier": "5711-8.txt", "encodage": "latin-1", "sha256": "123ba9e214721bcd4d2f1dd335580f04c4887a0b222d6853811cba4b86bda105"},
+    {"id": 5250, "titre": "Nana", "auteur": "Émile Zola", "langue": "fr", "role": "apprentissage", "chemin": "Nana_5250/master/5250-8.txt", "fichier": "5250-8.txt", "encodage": "latin-1", "sha256": "292fddca76d3954ea2ef8075b97a5f64745078e4a4b29e87040179347ce08d1b"},
+    {"id": 19657, "titre": "Notre-Dame de Paris", "auteur": "Victor Hugo", "langue": "fr", "role": "apprentissage", "chemin": "Notre-Dame-de-Paris_19657/master/19657-8.txt", "fichier": "19657-8.txt", "encodage": "latin-1", "sha256": "68ab63fd6ece108a531e05c24529d09dd8e7838eda4229ce24a9b4d08ab32807"},
+    {"id": 800, "titre": "Le Tour du monde en quatre-vingts jours", "auteur": "Jules Verne", "langue": "fr", "role": "test", "chemin": "Le-tour-du-monde-en-quatre-vingts-jours_800/master/800-8.txt", "fichier": "800-8.txt", "encodage": "latin-1", "sha256": "e3fb834a4b93a4b936f0c91fb32ec130187df4159be6c296570d727bb325ec1b"},
+    {"id": 14155, "titre": "Madame Bovary", "auteur": "Gustave Flaubert", "langue": "fr", "role": "test", "chemin": "Madame-Bovary_14155/master/14155-8.txt", "fichier": "14155-8.txt", "encodage": "latin-1", "sha256": "d8383b0e43723286604abcc1a5e96728f462e679b9b4d569d4b469d8f705f862"},
+    {"id": 4650, "titre": "Candide", "auteur": "Voltaire", "langue": "fr", "role": "test", "chemin": "Candide_4650/master/4650-8.txt", "fichier": "4650-8.txt", "encodage": "latin-1", "sha256": "7c5056e6e6804f8a7f71f2eb2156918f77e0afd80104237f95a205eb056075a8"},
+    {"id": 4791, "titre": "Voyage au centre de la Terre", "auteur": "Jules Verne", "langue": "fr", "role": "test", "chemin": "Voyage-au-Centre-de-la-Terre_4791/master/4791-8.txt", "fichier": "4791-8.txt", "encodage": "latin-1", "sha256": "a160c687a3070669f0ea2285ce2d8af356793f505748840875f6f13ea1ef56c5"},
+    {"id": 1342, "titre": "Pride and Prejudice", "auteur": "Jane Austen", "langue": "en", "role": "apprentissage", "chemin": "Pride-and-Prejudice_1342/master/1342.txt", "fichier": "1342.txt", "encodage": "utf-8", "sha256": "441e778a4297bfc944dc254810e8ded3134cfb0e36d73eef6bb312b4ffd74d6a"},
+    {"id": 84, "titre": "Frankenstein", "auteur": "Mary Shelley", "langue": "en", "role": "test", "chemin": "Frankenstein_84/master/84.txt", "fichier": "84.txt", "encodage": "utf-8", "sha256": "63905aed2ed77e597845305ff6730cb4d01851d5f321ce1904d4691685f70514"}
+  ]
+}
