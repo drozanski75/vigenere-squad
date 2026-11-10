@@ -1,0 +1,6 @@
+title = "vigenere-squad"
+[extend]
+useDefault = true
+[allowlist]
+description = "Clés de chiffrement classiques du corpus (non secrètes) et clé publique minisign"
+paths = ['''data/corpus/.*''', '''results/raw/.*''', '''traces/.*''', '''minisign\.pub''', '''SHA256SUMS.*''', '''uv\.lock''']

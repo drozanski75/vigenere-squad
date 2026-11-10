@@ -1,0 +1,13 @@
+{
+  "title": "Vigenère-Squad : une équipe d'agents IA qui casse les chiffrements classiques et explique sa démarche (v1.0.0)",
+  "upload_type": "software",
+  "description": "<p>Système multi-agents (orchestrateur et cinq agents spécialisés à liste fermée d'outils, modèle de langage local via Ollama) qui identifie le procédé de chiffrement classique d'un texte, retrouve la clé et le clair au moyen d'outils statistiques déterministes (indice de coïncidence, Kasiski, Friedman, χ², recuit simulé sur quadrigrammes, attaque de l'autoclave) puis rédige une explication pédagogique. Le modèle décide et explique ; le code calcule.</p><p>L'archive contient le code, le corpus à graine fixe, les résultats bruts, les métriques, les figures, les traces des agents, le rapport technique et les empreintes signées. Reproduction : <code>make reproduce</code>.</p>",
+  "creators": [
+    {"name": "Rozanski, Dawid", "affiliation": "SUP DE VINCI"}
+  ],
+  "license": "MIT",
+  "keywords": ["cryptanalyse", "chiffre de Vigenère", "systèmes multi-agents", "LLM local", "Ollama", "science ouverte", "reproductibilité"],
+  "language": "fra",
+  "version": "1.0.0",
+  "notes": "Documentation, résultats et données : CC BY 4.0 (voir LICENSE-DOCS-DATA.md). Textes sources : domaine public (Project Gutenberg)."
+}

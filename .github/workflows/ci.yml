@@ -1,0 +1,88 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    # Même code, trois systèmes : Linux, Windows, macOS
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-24.04, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+      - name: Données (empreintes SHA-256 vérifiées), modèles de langue, corpus
+        run: uv run --frozen vsquad donnees
+      - name: Tests et couverture (outils déterministes, seuil 70 %)
+        run: uv run --frozen pytest --cov --cov-report=term --cov-report=xml
+      - uses: actions/upload-artifact@v4
+        if: matrix.os == 'ubuntu-24.04'
+        with:
+          name: couverture
+          path: coverage.xml
+
+  docker:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Construction de l'image Docker (environnement figé)
+        run: docker build -t vigenere-squad .
+      - name: Test de l'image (référence sans LLM sur un chiffré)
+        run: |
+          docker run --rm --entrypoint sh vigenere-squad -c \
+            "uv run --frozen vsquad donnees > /dev/null && uv run --frozen vsquad casser --llm aucun --texte 'OH SHWLW SULQFH UHJDUGDLW OHV HWRLOHV HW SHQVDLW D VD URVH TXL HWDLW UHVWHH VHXOH VXU VD SODQHWH ORLQWDLQH'"
+
+  secrets:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Détection de secrets (gitleaks)
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  reproduce-small:
+    runs-on: ubuntu-24.04
+    needs: tests
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+      - name: Installer et démarrer Ollama
+        run: |
+          curl -fsSL https://ollama.com/install.sh | sh
+          (ollama serve > ollama.log 2>&1 &)
+          for i in $(seq 1 30); do curl -fsS http://127.0.0.1:11434/api/version && break; sleep 2; done
+      - name: Évaluation réduite (modèle de très petite taille)
+        run: uv run --frozen vsquad reproduire --petit
+      - name: Vérification de la signature des résultats publiés
+        run: |
+          if [ -f SHA256SUMS.minisig ]; then uv run --frozen vsquad verifier; else echo "pas encore de signature"; fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: metriques-reproduce-small
+          path: |
+            build/small/results/metrics.json
+            build/small/results/ENVIRONMENT.json
+            build/small/results/EXECUTION.json
+            build/small/results/raw/
+            build/small/results/figures/
+            build/small/traces/
+            ollama.log

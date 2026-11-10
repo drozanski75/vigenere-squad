@@ -1,0 +1,30 @@
+# Valeurs de la fiche de dépôt (scripts/fiche.py -> docs/fiche_depot.html, à imprimer en PDF).
+# Remplacer drozanski75, <ID>, <RUN_ID> après publication (voir docs/GUIDE_PUBLICATION.md).
+nom: "ROZANSKI Dawid"
+promotion: "M1 Cybersécurité — SUP DE VINCI"
+sujet: "n° 1 — Vigenère-Squad"
+orcid: ""
+compte: "drozanski75"
+depot: "vigenere-squad"
+zenodo_id: "<ID>"
+ci_run_id: "<RUN_ID>"
+video: "<URL de la vidéo (YouTube non répertoriée, PeerTube, Zenodo…)>"
+sha256_archive_zenodo: "<sha256sum du zip téléchargé depuis Zenodo>"
+resume: >-
+  Les chiffres classiques se cassent par une démarche en rôles : identifier le
+  procédé, estimer la clé, valider le clair, expliquer. Vigenère-Squad confie
+  ces rôles à cinq agents (Classifieur, Cryptanalyste, Linguiste, Pédagogue,
+  Vérificateur) pilotés par un orchestrateur avec boucle de vérification et
+  garde-fous ; un modèle local (Qwen3, Ollama, sans GPU) décide et explique,
+  tandis que tous les calculs (IC, Kasiski, Friedman, χ², recuit simulé,
+  attaque de l'autoclave) sont faits par du code testé. Une ablation sur 180
+  chiffrés de six procédés compare une heuristique sans modèle à deux tailles
+  de modèle, avec robustesse, défaillances et injection de consignes.
+  [Résultat principal à compléter avec les valeurs de metrics.json.]
+# 3 à 5 clés du bloc « resume » de results/metrics.json
+resultats:
+  - taux_exact_a_baseline
+  - taux_exact_b_qwen3_4b
+  - taux_exact_a_baseline_sur_sous_ensemble_b_qwen3_4b
+  - kasiski_tete_correcte_autoclave_pct
+  - injection_garde_fou_total_b_qwen3_4b

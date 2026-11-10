@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "Si vous utilisez ce logiciel ou ses résultats, merci de citer la version archivée (DOI)."
+title: "Vigenère-Squad : une équipe d'agents IA qui casse les chiffrements classiques et explique sa démarche"
+version: 1.0.0
+date-released: "2026-11-19"
+license: MIT
+type: software
+authors:
+  - family-names: Rozanski
+    given-names: Dawid
+    affiliation: "SUP DE VINCI"
+    # orcid: "https://orcid.org/0000-0000-0000-0000"
+repository-code: "https://github.com/drozanski75/vigenere-squad"
+url: "https://drozanski75.github.io/vigenere-squad/"
+keywords:
+  - cryptanalyse
+  - chiffre de Vigenère
+  - systèmes multi-agents
+  - LLM local
+  - Ollama
+  - science ouverte
+  - reproductibilité
+abstract: >-
+  Système multi-agents (orchestrateur et cinq agents spécialisés à liste fermée
+  d'outils) qui identifie le procédé de chiffrement classique d'un texte
+  (César, affine, Vigenère, autoclave, substitution, Beaufort), retrouve la clé
+  et le clair au moyen d'outils statistiques déterministes, puis rédige une
+  explication pédagogique. Le modèle de langage local décide et explique ; le
+  code calcule. Évaluation avec étude d'ablation, robustesse, défaillances
+  injectées et lien avec la distance d'unicité de Shannon.
