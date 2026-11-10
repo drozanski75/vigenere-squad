@@ -1,0 +1,4965 @@
+{
+  "experiences": {
+    "defaillances": {
+      "b_qwen3_4b": {
+        "appels_outils_moyens": {
+          "ecart_type": 1.71,
+          "moyenne": 11.78,
+          "n_repetitions": 3,
+          "valeurs": [
+            10.33,
+            13.67,
+            11.33
+          ]
+        },
+        "appels_refuses_total": 0,
+        "contexte_sature_total": 17,
+        "duree_moyenne_s": {
+          "ecart_type": 180.186,
+          "moyenne": 483.319,
+          "n_repetitions": 3,
+          "valeurs": [
+            322.49,
+            678.046,
+            449.42
+          ]
+        },
+        "erreurs_llm_total": 106,
+        "garde_fou_total": 0,
+        "iterations_moyennes": {
+          "ecart_type": 0.44,
+          "moyenne": 3.0,
+          "n_repetitions": 3,
+          "valeurs": [
+            2.5,
+            3.33,
+            3.17
+          ]
+        },
+        "longueur_min_90": {
+          "affine": null,
+          "autoclave": "500-899",
+          "beaufort": null,
+          "cesar": "500-899",
+          "substitution": "500-899",
+          "vigenere": "500-899"
+        },
+        "memoire_ollama_mo": {
+          "ecart_type": 0.4,
+          "moyenne": 42.6,
+          "n_repetitions": 3,
+          "valeurs": [
+            42.8,
+            42.1,
+            42.8
+          ]
+        },
+        "memoire_pic_totale_mo": 107.3,
+        "memoire_python_mo": {
+          "ecart_type": 0.6,
+          "moyenne": 62.3,
+          "n_repetitions": 3,
+          "valeurs": [
+            62.2,
+            61.7,
+            63.0
+          ]
+        },
+        "n_chiffres": 6,
+        "par_procede": {
+          "affine": {
+            "ecart_type": 57.74,
+            "moyenne": 66.67,
+            "n_repetitions": 3,
+            "valeurs": [
+              100.0,
+              0.0,
+              100.0
+            ]
+          },
+          "autoclave": {
+            "ecart_type": 0.0,
+            "moyenne": 100.0,
+            "n_repetitions": 3,
+            "valeurs": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          "beaufort": {
+            "ecart_type": 57.74,
+            "moyenne": 66.67,
+            "n_repetitions": 3,
+            "valeurs": [
+              100.0,
+              100.0,
+              0.0
+            ]
+          },
+          "cesar": {
+            "ecart_type": 0.0,
+            "moyenne": 100.0,
+            "n_repetitions": 3,
+            "valeurs": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          "substitution": {
+            "ecart_type": 0.0,
+            "moyenne": 100.0,
+            "n_repetitions": 3,
+            "valeurs": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          "vigenere": {
+            "ecart_type": 0.0,
+            "moyenne": 100.0,
+            "n_repetitions": 3,
+            "valeurs": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          }
+        },
+        "par_procede_tranche": {
+          "affine": {
+            "500-899": {
+              "ecart_type": 57.74,
+              "moyenne": 66.67,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                0.0,
+                100.0
+              ]
+            }
+          },
+          "autoclave": {
+            "500-899": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            }
+          },
+          "beaufort": {
+            "500-899": {
+              "ecart_type": 57.74,
+              "moyenne": 66.67,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                0.0
+              ]
+            }
+          },
+          "cesar": {
+            "500-899": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            }
+          },
+          "substitution": {
+            "500-899": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            }
+          },
+          "vigenere": {
+            "500-899": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            }
+          }
+        },
+        "par_tranche": {
+          "500-899": {
+            "ecart_type": 9.62,
+            "moyenne": 88.89,
+            "n_repetitions": 3,
+            "valeurs": [
+              100.0,
+              83.33,
+              83.33
+            ]
+          }
+        },
+        "precision_lettres": {
+          "ecart_type": 8.89,
+          "moyenne": 94.85,
+          "n_repetitions": 3,
+          "valeurs": [
+            100.0,
+            99.97,
+            84.58
+          ]
+        },
+        "statuts": {
+          "accepte": 14,
+          "meilleur_effort": 4
+        },
+        "taux_exact": {
+          "ecart_type": 9.62,
+          "moyenne": 88.89,
+          "n_repetitions": 3,
+          "valeurs": [
+            100.0,
+            83.33,
+            83.33
+          ]
+        },
+        "taux_procede_correct": {
+          "ecart_type": 9.62,
+          "moyenne": 88.89,
+          "n_repetitions": 3,
+          "valeurs": [
+            100.0,
+            83.33,
+            83.33
+          ]
+        },
+        "taux_repli": {
+          "ecart_type": 9.62,
+          "moyenne": 77.78,
+          "n_repetitions": 3,
+          "valeurs": [
+            66.67,
+            83.33,
+            83.33
+          ]
+        }
+      }
+    },
+    "injection": {
+      "b_qwen3_4b": {
+        "appels_outils_moyens": {
+          "ecart_type": 2.4,
+          "moyenne": 12.67,
+          "n_repetitions": 3,
+          "valeurs": [
+            10.67,
+            15.33,
+            12.0
+          ]
+        },
+        "appels_refuses_total": 0,
+        "contexte_sature_total": 21,
+        "duree_moyenne_s": {
+          "ecart_type": 254.517,
+          "moyenne": 596.966,
+          "n_repetitions": 3,
+          "valeurs": [
+            306.379,
+            704.203,
+            780.316
+          ]
+        },
+        "erreurs_llm_total": 12,
+        "garde_fou_total": 14,
+        "iterations_moyennes": {
+          "ecart_type": 0.84,
+          "moyenne": 3.44,
+          "n_repetitions": 3,
+          "valeurs": [
+            2.67,
+            4.33,
+            3.33
+          ]
+        },
+        "longueur_min_90": {
+          "autoclave": "500-899",
+          "beaufort": null,
+          "substitution": "500-899"
+        },
+        "memoire_ollama_mo": {
+          "ecart_type": 0.1,
+          "moyenne": 42.4,
+          "n_repetitions": 3,
+          "valeurs": [
+            42.4,
+            42.3,
+            42.6
+          ]
+        },
+        "memoire_pic_totale_mo": 106.5,
+        "memoire_python_mo": {
+          "ecart_type": 1.1,
+          "moyenne": 62.1,
+          "n_repetitions": 3,
+          "valeurs": [
+            63.1,
+            62.3,
+            60.8
+          ]
+        },
+        "n_chiffres": 3,
+        "par_procede": {
+          "autoclave": {
+            "ecart_type": 0.0,
+            "moyenne": 100.0,
+            "n_repetitions": 3,
+            "valeurs": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          "beaufort": {
+            "ecart_type": 57.74,
+            "moyenne": 66.67,
+            "n_repetitions": 3,
+            "valeurs": [
+              100.0,
+              0.0,
+              100.0
+            ]
+          },
+          "substitution": {
+            "ecart_type": 0.0,
+            "moyenne": 100.0,
+            "n_repetitions": 3,
+            "valeurs": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          }
+        },
+        "par_procede_tranche": {
+          "autoclave": {
+            "500-899": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            }
+          },
+          "beaufort": {
+            "500-899": {
+              "ecart_type": 57.74,
+              "moyenne": 66.67,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                0.0,
+                100.0
+              ]
+            }
+          },
+          "substitution": {
+            "500-899": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            }
+          }
+        },
+        "par_tranche": {
+          "500-899": {
+            "ecart_type": 19.25,
+            "moyenne": 88.89,
+            "n_repetitions": 3,
+            "valeurs": [
+              100.0,
+              66.67,
+              100.0
+            ]
+          }
+        },
+        "precision_lettres": {
+          "ecart_type": 9.62,
+          "moyenne": 94.44,
+          "n_repetitions": 3,
+          "valeurs": [
+            100.0,
+            83.33,
+            100.0
+          ]
+        },
+        "statuts": {
+          "accepte": 7,
+          "meilleur_effort": 2
+        },
+        "taux_exact": {
+          "ecart_type": 19.25,
+          "moyenne": 88.89,
+          "n_repetitions": 3,
+          "valeurs": [
+            100.0,
+            66.67,
+            100.0
+          ]
+        },
+        "taux_procede_correct": {
+          "ecart_type": 0.0,
+          "moyenne": 100.0,
+          "n_repetitions": 3,
+          "valeurs": [
+            100.0,
+            100.0,
+            100.0
+          ]
+        },
+        "taux_repli": {
+          "ecart_type": 19.25,
+          "moyenne": 88.89,
+          "n_repetitions": 3,
+          "valeurs": [
+            100.0,
+            66.67,
+            100.0
+          ]
+        }
+      }
+    },
+    "principal": {
+      "a_baseline": {
+        "appels_outils_moyens": {
+          "ecart_type": 0.0,
+          "moyenne": 2.03,
+          "n_repetitions": 3,
+          "valeurs": [
+            2.03,
+            2.03,
+            2.03
+          ]
+        },
+        "appels_refuses_total": 0,
+        "contexte_sature_total": 0,
+        "duree_moyenne_s": {
+          "ecart_type": 0.0,
+          "moyenne": 0.447,
+          "n_repetitions": 3,
+          "valeurs": [
+            0.447,
+            0.446,
+            0.447
+          ]
+        },
+        "erreurs_llm_total": 0,
+        "garde_fou_total": 0,
+        "iterations_moyennes": {
+          "ecart_type": 0.0,
+          "moyenne": 2.03,
+          "n_repetitions": 3,
+          "valeurs": [
+            2.03,
+            2.03,
+            2.03
+          ]
+        },
+        "longueur_min_90": {
+          "affine": "080-119",
+          "autoclave": "120-249",
+          "beaufort": "080-119",
+          "cesar": "080-119",
+          "substitution": "500-899",
+          "vigenere": "120-249"
+        },
+        "memoire_ollama_mo": {
+          "ecart_type": 0.0,
+          "moyenne": 0.0,
+          "n_repetitions": 3,
+          "valeurs": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "memoire_pic_totale_mo": 75.5,
+        "memoire_python_mo": {
+          "ecart_type": 0.0,
+          "moyenne": 75.5,
+          "n_repetitions": 3,
+          "valeurs": [
+            75.5,
+            75.5,
+            75.5
+          ]
+        },
+        "n_chiffres": 180,
+        "par_procede": {
+          "affine": {
+            "ecart_type": 0.0,
+            "moyenne": 100.0,
+            "n_repetitions": 3,
+            "valeurs": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          "autoclave": {
+            "ecart_type": 0.0,
+            "moyenne": 96.67,
+            "n_repetitions": 3,
+            "valeurs": [
+              96.67,
+              96.67,
+              96.67
+            ]
+          },
+          "beaufort": {
+            "ecart_type": 0.0,
+            "moyenne": 100.0,
+            "n_repetitions": 3,
+            "valeurs": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          "cesar": {
+            "ecart_type": 0.0,
+            "moyenne": 100.0,
+            "n_repetitions": 3,
+            "valeurs": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          "substitution": {
+            "ecart_type": 1.92,
+            "moyenne": 72.22,
+            "n_repetitions": 3,
+            "valeurs": [
+              73.33,
+              73.33,
+              70.0
+            ]
+          },
+          "vigenere": {
+            "ecart_type": 0.0,
+            "moyenne": 93.33,
+            "n_repetitions": 3,
+            "valeurs": [
+              93.33,
+              93.33,
+              93.33
+            ]
+          }
+        },
+        "par_procede_tranche": {
+          "affine": {
+            "080-119": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "120-249": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "1500+": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "250-499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "500-899": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "900-1499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            }
+          },
+          "autoclave": {
+            "080-119": {
+              "ecart_type": 0.0,
+              "moyenne": 80.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                80.0,
+                80.0,
+                80.0
+              ]
+            },
+            "120-249": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "1500+": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "250-499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "500-899": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "900-1499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            }
+          },
+          "beaufort": {
+            "080-119": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "120-249": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "1500+": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "250-499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "500-899": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "900-1499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            }
+          },
+          "cesar": {
+            "080-119": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "120-249": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "1500+": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "250-499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "500-899": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "900-1499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            }
+          },
+          "substitution": {
+            "080-119": {
+              "ecart_type": 0.0,
+              "moyenne": 0.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "120-249": {
+              "ecart_type": 0.0,
+              "moyenne": 60.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                60.0,
+                60.0,
+                60.0
+              ]
+            },
+            "1500+": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "250-499": {
+              "ecart_type": 11.55,
+              "moyenne": 73.33,
+              "n_repetitions": 3,
+              "valeurs": [
+                80.0,
+                80.0,
+                60.0
+              ]
+            },
+            "500-899": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "900-1499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            }
+          },
+          "vigenere": {
+            "080-119": {
+              "ecart_type": 0.0,
+              "moyenne": 60.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                60.0,
+                60.0,
+                60.0
+              ]
+            },
+            "120-249": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "1500+": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "250-499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "500-899": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "900-1499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            }
+          }
+        },
+        "par_tranche": {
+          "080-119": {
+            "ecart_type": 0.0,
+            "moyenne": 73.33,
+            "n_repetitions": 3,
+            "valeurs": [
+              73.33,
+              73.33,
+              73.33
+            ]
+          },
+          "120-249": {
+            "ecart_type": 0.0,
+            "moyenne": 93.33,
+            "n_repetitions": 3,
+            "valeurs": [
+              93.33,
+              93.33,
+              93.33
+            ]
+          },
+          "1500+": {
+            "ecart_type": 0.0,
+            "moyenne": 100.0,
+            "n_repetitions": 3,
+            "valeurs": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          "250-499": {
+            "ecart_type": 1.92,
+            "moyenne": 95.56,
+            "n_repetitions": 3,
+            "valeurs": [
+              96.67,
+              96.67,
+              93.33
+            ]
+          },
+          "500-899": {
+            "ecart_type": 0.0,
+            "moyenne": 100.0,
+            "n_repetitions": 3,
+            "valeurs": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          "900-1499": {
+            "ecart_type": 0.0,
+            "moyenne": 100.0,
+            "n_repetitions": 3,
+            "valeurs": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          }
+        },
+        "precision_lettres": {
+          "ecart_type": 0.18,
+          "moyenne": 98.02,
+          "n_repetitions": 3,
+          "valeurs": [
+            97.82,
+            98.11,
+            98.14
+          ]
+        },
+        "statuts": {
+          "accepte": 537,
+          "meilleur_effort": 3
+        },
+        "taux_exact": {
+          "ecart_type": 0.32,
+          "moyenne": 93.7,
+          "n_repetitions": 3,
+          "valeurs": [
+            93.89,
+            93.89,
+            93.33
+          ]
+        },
+        "taux_procede_correct": {
+          "ecart_type": 0.0,
+          "moyenne": 99.44,
+          "n_repetitions": 3,
+          "valeurs": [
+            99.44,
+            99.44,
+            99.44
+          ]
+        },
+        "taux_repli": {
+          "ecart_type": 0.0,
+          "moyenne": 0.0,
+          "n_repetitions": 3,
+          "valeurs": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "b_qwen3_4b": {
+        "appels_outils_moyens": {
+          "ecart_type": 1.99,
+          "moyenne": 10.44,
+          "n_repetitions": 3,
+          "valeurs": [
+            9.83,
+            12.67,
+            8.83
+          ]
+        },
+        "appels_refuses_total": 0,
+        "comparaison_reference": {
+          "n_chiffres_communs": 12,
+          "reference_sur_sous_ensemble": {
+            "ecart_type": 0.0,
+            "moyenne": 100.0,
+            "n_repetitions": 3,
+            "valeurs": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          }
+        },
+        "contexte_sature_total": 22,
+        "duree_moyenne_s": {
+          "ecart_type": 145.775,
+          "moyenne": 550.691,
+          "n_repetitions": 3,
+          "valeurs": [
+            582.004,
+            678.265,
+            391.804
+          ]
+        },
+        "erreurs_llm_total": 12,
+        "garde_fou_total": 0,
+        "iterations_moyennes": {
+          "ecart_type": 0.8,
+          "moyenne": 2.64,
+          "n_repetitions": 3,
+          "valeurs": [
+            2.5,
+            3.5,
+            1.92
+          ]
+        },
+        "longueur_min_90": {
+          "affine": "120-249",
+          "autoclave": "120-249",
+          "beaufort": "900-1499",
+          "cesar": "120-249",
+          "substitution": "120-249",
+          "vigenere": "120-249"
+        },
+        "memoire_ollama_mo": {
+          "ecart_type": 0.4,
+          "moyenne": 42.4,
+          "n_repetitions": 3,
+          "valeurs": [
+            42.5,
+            42.6,
+            41.9
+          ]
+        },
+        "memoire_pic_totale_mo": 107.5,
+        "memoire_python_mo": {
+          "ecart_type": 1.2,
+          "moyenne": 62.7,
+          "n_repetitions": 3,
+          "valeurs": [
+            61.8,
+            64.0,
+            62.2
+          ]
+        },
+        "n_chiffres": 12,
+        "par_procede": {
+          "affine": {
+            "ecart_type": 0.0,
+            "moyenne": 100.0,
+            "n_repetitions": 3,
+            "valeurs": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          "autoclave": {
+            "ecart_type": 0.0,
+            "moyenne": 100.0,
+            "n_repetitions": 3,
+            "valeurs": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          "beaufort": {
+            "ecart_type": 28.87,
+            "moyenne": 83.33,
+            "n_repetitions": 3,
+            "valeurs": [
+              100.0,
+              50.0,
+              100.0
+            ]
+          },
+          "cesar": {
+            "ecart_type": 0.0,
+            "moyenne": 100.0,
+            "n_repetitions": 3,
+            "valeurs": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          "substitution": {
+            "ecart_type": 0.0,
+            "moyenne": 100.0,
+            "n_repetitions": 3,
+            "valeurs": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          "vigenere": {
+            "ecart_type": 0.0,
+            "moyenne": 100.0,
+            "n_repetitions": 3,
+            "valeurs": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          }
+        },
+        "par_procede_tranche": {
+          "affine": {
+            "120-249": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "900-1499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            }
+          },
+          "autoclave": {
+            "120-249": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "900-1499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            }
+          },
+          "beaufort": {
+            "120-249": {
+              "ecart_type": 57.74,
+              "moyenne": 66.67,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                0.0,
+                100.0
+              ]
+            },
+            "900-1499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            }
+          },
+          "cesar": {
+            "120-249": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "900-1499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            }
+          },
+          "substitution": {
+            "120-249": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "900-1499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            }
+          },
+          "vigenere": {
+            "120-249": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "900-1499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            }
+          }
+        },
+        "par_tranche": {
+          "120-249": {
+            "ecart_type": 9.62,
+            "moyenne": 94.44,
+            "n_repetitions": 3,
+            "valeurs": [
+              100.0,
+              83.33,
+              100.0
+            ]
+          },
+          "900-1499": {
+            "ecart_type": 0.0,
+            "moyenne": 100.0,
+            "n_repetitions": 3,
+            "valeurs": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          }
+        },
+        "precision_lettres": {
+          "ecart_type": 4.52,
+          "moyenne": 97.39,
+          "n_repetitions": 3,
+          "valeurs": [
+            100.0,
+            92.17,
+            100.0
+          ]
+        },
+        "statuts": {
+          "accepte": 32,
+          "meilleur_effort": 4
+        },
+        "taux_exact": {
+          "ecart_type": 4.81,
+          "moyenne": 97.22,
+          "n_repetitions": 3,
+          "valeurs": [
+            100.0,
+            91.67,
+            100.0
+          ]
+        },
+        "taux_procede_correct": {
+          "ecart_type": 4.81,
+          "moyenne": 86.11,
+          "n_repetitions": 3,
+          "valeurs": [
+            91.67,
+            83.33,
+            83.33
+          ]
+        },
+        "taux_repli": {
+          "ecart_type": 9.62,
+          "moyenne": 61.11,
+          "n_repetitions": 3,
+          "valeurs": [
+            66.67,
+            66.67,
+            50.0
+          ]
+        }
+      },
+      "c_qwen3_1.7b": {
+        "appels_outils_moyens": {
+          "ecart_type": 0.22,
+          "moyenne": 7.0,
+          "n_repetitions": 3,
+          "valeurs": [
+            7.17,
+            6.75,
+            7.08
+          ]
+        },
+        "appels_refuses_total": 0,
+        "comparaison_reference": {
+          "n_chiffres_communs": 12,
+          "reference_sur_sous_ensemble": {
+            "ecart_type": 0.0,
+            "moyenne": 100.0,
+            "n_repetitions": 3,
+            "valeurs": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          }
+        },
+        "contexte_sature_total": 27,
+        "duree_moyenne_s": {
+          "ecart_type": 18.805,
+          "moyenne": 444.078,
+          "n_repetitions": 3,
+          "valeurs": [
+            441.336,
+            426.795,
+            464.103
+          ]
+        },
+        "erreurs_llm_total": 107,
+        "garde_fou_total": 22,
+        "iterations_moyennes": {
+          "ecart_type": 0.19,
+          "moyenne": 4.39,
+          "n_repetitions": 3,
+          "valeurs": [
+            4.5,
+            4.17,
+            4.5
+          ]
+        },
+        "longueur_min_90": {
+          "affine": "120-249",
+          "autoclave": "120-249",
+          "beaufort": null,
+          "cesar": "120-249",
+          "substitution": "120-249",
+          "vigenere": null
+        },
+        "memoire_ollama_mo": {
+          "ecart_type": 0.3,
+          "moyenne": 42.1,
+          "n_repetitions": 3,
+          "valeurs": [
+            42.3,
+            41.8,
+            42.0
+          ]
+        },
+        "memoire_pic_totale_mo": 106.69999999999999,
+        "memoire_python_mo": {
+          "ecart_type": 1.4,
+          "moyenne": 62.7,
+          "n_repetitions": 3,
+          "valeurs": [
+            61.9,
+            64.3,
+            61.7
+          ]
+        },
+        "n_chiffres": 12,
+        "par_procede": {
+          "affine": {
+            "ecart_type": 0.0,
+            "moyenne": 100.0,
+            "n_repetitions": 3,
+            "valeurs": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          "autoclave": {
+            "ecart_type": 0.0,
+            "moyenne": 100.0,
+            "n_repetitions": 3,
+            "valeurs": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          "beaufort": {
+            "ecart_type": 50.0,
+            "moyenne": 50.0,
+            "n_repetitions": 3,
+            "valeurs": [
+              100.0,
+              0.0,
+              50.0
+            ]
+          },
+          "cesar": {
+            "ecart_type": 0.0,
+            "moyenne": 100.0,
+            "n_repetitions": 3,
+            "valeurs": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          "substitution": {
+            "ecart_type": 0.0,
+            "moyenne": 100.0,
+            "n_repetitions": 3,
+            "valeurs": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          "vigenere": {
+            "ecart_type": 28.87,
+            "moyenne": 83.33,
+            "n_repetitions": 3,
+            "valeurs": [
+              50.0,
+              100.0,
+              100.0
+            ]
+          }
+        },
+        "par_procede_tranche": {
+          "affine": {
+            "120-249": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "900-1499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            }
+          },
+          "autoclave": {
+            "120-249": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "900-1499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            }
+          },
+          "beaufort": {
+            "120-249": {
+              "ecart_type": 57.74,
+              "moyenne": 66.67,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                0.0,
+                100.0
+              ]
+            },
+            "900-1499": {
+              "ecart_type": 57.74,
+              "moyenne": 33.33,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "cesar": {
+            "120-249": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "900-1499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            }
+          },
+          "substitution": {
+            "120-249": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "900-1499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            }
+          },
+          "vigenere": {
+            "120-249": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "900-1499": {
+              "ecart_type": 57.74,
+              "moyenne": 66.67,
+              "n_repetitions": 3,
+              "valeurs": [
+                0.0,
+                100.0,
+                100.0
+              ]
+            }
+          }
+        },
+        "par_tranche": {
+          "120-249": {
+            "ecart_type": 9.62,
+            "moyenne": 94.44,
+            "n_repetitions": 3,
+            "valeurs": [
+              100.0,
+              83.33,
+              100.0
+            ]
+          },
+          "900-1499": {
+            "ecart_type": 0.0,
+            "moyenne": 83.33,
+            "n_repetitions": 3,
+            "valeurs": [
+              83.33,
+              83.33,
+              83.33
+            ]
+          }
+        },
+        "precision_lettres": {
+          "ecart_type": 4.61,
+          "moyenne": 90.1,
+          "n_repetitions": 3,
+          "valeurs": [
+            92.74,
+            84.78,
+            92.77
+          ]
+        },
+        "statuts": {
+          "accepte": 13,
+          "meilleur_effort": 23
+        },
+        "taux_exact": {
+          "ecart_type": 4.81,
+          "moyenne": 88.89,
+          "n_repetitions": 3,
+          "valeurs": [
+            91.67,
+            83.33,
+            91.67
+          ]
+        },
+        "taux_procede_correct": {
+          "ecart_type": 17.35,
+          "moyenne": 86.11,
+          "n_repetitions": 3,
+          "valeurs": [
+            100.0,
+            66.67,
+            91.67
+          ]
+        },
+        "taux_repli": {
+          "ecart_type": 0.0,
+          "moyenne": 100.0,
+          "n_repetitions": 3,
+          "valeurs": [
+            100.0,
+            100.0,
+            100.0
+          ]
+        }
+      }
+    },
+    "robustesse_anglais_modele_en": {
+      "a_baseline": {
+        "appels_outils_moyens": {
+          "ecart_type": 0.01,
+          "moyenne": 2.12,
+          "n_repetitions": 3,
+          "valeurs": [
+            2.12,
+            2.13,
+            2.12
+          ]
+        },
+        "appels_refuses_total": 0,
+        "contexte_sature_total": 0,
+        "duree_moyenne_s": {
+          "ecart_type": 0.001,
+          "moyenne": 0.457,
+          "n_repetitions": 3,
+          "valeurs": [
+            0.457,
+            0.458,
+            0.457
+          ]
+        },
+        "erreurs_llm_total": 0,
+        "garde_fou_total": 0,
+        "iterations_moyennes": {
+          "ecart_type": 0.01,
+          "moyenne": 2.12,
+          "n_repetitions": 3,
+          "valeurs": [
+            2.12,
+            2.13,
+            2.12
+          ]
+        },
+        "longueur_min_90": {
+          "affine": "080-119",
+          "autoclave": "080-119",
+          "beaufort": "120-249",
+          "cesar": "080-119",
+          "substitution": "1500+",
+          "vigenere": "120-249"
+        },
+        "memoire_ollama_mo": {
+          "ecart_type": 0.0,
+          "moyenne": 0.0,
+          "n_repetitions": 3,
+          "valeurs": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "memoire_pic_totale_mo": 75.1,
+        "memoire_python_mo": {
+          "ecart_type": 0.0,
+          "moyenne": 75.1,
+          "n_repetitions": 3,
+          "valeurs": [
+            75.1,
+            75.1,
+            75.1
+          ]
+        },
+        "n_chiffres": 180,
+        "par_procede": {
+          "affine": {
+            "ecart_type": 0.0,
+            "moyenne": 100.0,
+            "n_repetitions": 3,
+            "valeurs": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          "autoclave": {
+            "ecart_type": 0.0,
+            "moyenne": 100.0,
+            "n_repetitions": 3,
+            "valeurs": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          "beaufort": {
+            "ecart_type": 0.0,
+            "moyenne": 96.67,
+            "n_repetitions": 3,
+            "valeurs": [
+              96.67,
+              96.67,
+              96.67
+            ]
+          },
+          "cesar": {
+            "ecart_type": 0.0,
+            "moyenne": 100.0,
+            "n_repetitions": 3,
+            "valeurs": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          "substitution": {
+            "ecart_type": 3.33,
+            "moyenne": 70.0,
+            "n_repetitions": 3,
+            "valeurs": [
+              70.0,
+              73.33,
+              66.67
+            ]
+          },
+          "vigenere": {
+            "ecart_type": 0.0,
+            "moyenne": 96.67,
+            "n_repetitions": 3,
+            "valeurs": [
+              96.67,
+              96.67,
+              96.67
+            ]
+          }
+        },
+        "par_procede_tranche": {
+          "affine": {
+            "080-119": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "120-249": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "1500+": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "250-499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "500-899": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "900-1499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            }
+          },
+          "autoclave": {
+            "080-119": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "120-249": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "1500+": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "250-499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "500-899": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "900-1499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            }
+          },
+          "beaufort": {
+            "080-119": {
+              "ecart_type": 0.0,
+              "moyenne": 80.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                80.0,
+                80.0,
+                80.0
+              ]
+            },
+            "120-249": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "1500+": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "250-499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "500-899": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "900-1499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            }
+          },
+          "cesar": {
+            "080-119": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "120-249": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "1500+": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "250-499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "500-899": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "900-1499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            }
+          },
+          "substitution": {
+            "080-119": {
+              "ecart_type": 11.55,
+              "moyenne": 6.67,
+              "n_repetitions": 3,
+              "valeurs": [
+                0.0,
+                20.0,
+                0.0
+              ]
+            },
+            "120-249": {
+              "ecart_type": 11.55,
+              "moyenne": 66.67,
+              "n_repetitions": 3,
+              "valeurs": [
+                80.0,
+                60.0,
+                60.0
+              ]
+            },
+            "1500+": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "250-499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "500-899": {
+              "ecart_type": 0.0,
+              "moyenne": 80.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                80.0,
+                80.0,
+                80.0
+              ]
+            },
+            "900-1499": {
+              "ecart_type": 11.55,
+              "moyenne": 66.67,
+              "n_repetitions": 3,
+              "valeurs": [
+                60.0,
+                80.0,
+                60.0
+              ]
+            }
+          },
+          "vigenere": {
+            "080-119": {
+              "ecart_type": 0.0,
+              "moyenne": 80.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                80.0,
+                80.0,
+                80.0
+              ]
+            },
+            "120-249": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "1500+": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "250-499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "500-899": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "900-1499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            }
+          }
+        },
+        "par_tranche": {
+          "080-119": {
+            "ecart_type": 1.92,
+            "moyenne": 77.78,
+            "n_repetitions": 3,
+            "valeurs": [
+              76.67,
+              80.0,
+              76.67
+            ]
+          },
+          "120-249": {
+            "ecart_type": 1.92,
+            "moyenne": 94.44,
+            "n_repetitions": 3,
+            "valeurs": [
+              96.67,
+              93.33,
+              93.33
+            ]
+          },
+          "1500+": {
+            "ecart_type": 0.0,
+            "moyenne": 100.0,
+            "n_repetitions": 3,
+            "valeurs": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          "250-499": {
+            "ecart_type": 0.0,
+            "moyenne": 100.0,
+            "n_repetitions": 3,
+            "valeurs": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          "500-899": {
+            "ecart_type": 0.0,
+            "moyenne": 96.67,
+            "n_repetitions": 3,
+            "valeurs": [
+              96.67,
+              96.67,
+              96.67
+            ]
+          },
+          "900-1499": {
+            "ecart_type": 1.92,
+            "moyenne": 94.44,
+            "n_repetitions": 3,
+            "valeurs": [
+              93.33,
+              96.67,
+              93.33
+            ]
+          }
+        },
+        "precision_lettres": {
+          "ecart_type": 0.38,
+          "moyenne": 97.98,
+          "n_repetitions": 3,
+          "valeurs": [
+            98.07,
+            97.56,
+            98.3
+          ]
+        },
+        "statuts": {
+          "accepte": 535,
+          "meilleur_effort": 5
+        },
+        "taux_exact": {
+          "ecart_type": 0.56,
+          "moyenne": 93.89,
+          "n_repetitions": 3,
+          "valeurs": [
+            93.89,
+            94.44,
+            93.33
+          ]
+        },
+        "taux_procede_correct": {
+          "ecart_type": 0.32,
+          "moyenne": 99.63,
+          "n_repetitions": 3,
+          "valeurs": [
+            99.44,
+            99.44,
+            100.0
+          ]
+        },
+        "taux_repli": {
+          "ecart_type": 0.0,
+          "moyenne": 0.0,
+          "n_repetitions": 3,
+          "valeurs": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "robustesse_anglais_modele_fr": {
+      "a_baseline": {
+        "appels_outils_moyens": {
+          "ecart_type": 0.01,
+          "moyenne": 5.76,
+          "n_repetitions": 3,
+          "valeurs": [
+            5.76,
+            5.76,
+            5.74
+          ]
+        },
+        "appels_refuses_total": 0,
+        "contexte_sature_total": 0,
+        "duree_moyenne_s": {
+          "ecart_type": 0.0,
+          "moyenne": 1.547,
+          "n_repetitions": 3,
+          "valeurs": [
+            1.548,
+            1.548,
+            1.547
+          ]
+        },
+        "erreurs_llm_total": 0,
+        "garde_fou_total": 0,
+        "iterations_moyennes": {
+          "ecart_type": 0.01,
+          "moyenne": 5.76,
+          "n_repetitions": 3,
+          "valeurs": [
+            5.76,
+            5.76,
+            5.74
+          ]
+        },
+        "longueur_min_90": {
+          "affine": null,
+          "autoclave": "900-1499",
+          "beaufort": "250-499",
+          "cesar": null,
+          "substitution": null,
+          "vigenere": "250-499"
+        },
+        "memoire_ollama_mo": {
+          "ecart_type": 0.0,
+          "moyenne": 0.0,
+          "n_repetitions": 3,
+          "valeurs": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "memoire_pic_totale_mo": 75.1,
+        "memoire_python_mo": {
+          "ecart_type": 0.0,
+          "moyenne": 75.1,
+          "n_repetitions": 3,
+          "valeurs": [
+            75.1,
+            75.1,
+            75.1
+          ]
+        },
+        "n_chiffres": 180,
+        "par_procede": {
+          "affine": {
+            "ecart_type": 0.0,
+            "moyenne": 0.0,
+            "n_repetitions": 3,
+            "valeurs": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "autoclave": {
+            "ecart_type": 0.0,
+            "moyenne": 70.0,
+            "n_repetitions": 3,
+            "valeurs": [
+              70.0,
+              70.0,
+              70.0
+            ]
+          },
+          "beaufort": {
+            "ecart_type": 0.0,
+            "moyenne": 73.33,
+            "n_repetitions": 3,
+            "valeurs": [
+              73.33,
+              73.33,
+              73.33
+            ]
+          },
+          "cesar": {
+            "ecart_type": 1.92,
+            "moyenne": 8.89,
+            "n_repetitions": 3,
+            "valeurs": [
+              10.0,
+              10.0,
+              6.67
+            ]
+          },
+          "substitution": {
+            "ecart_type": 0.0,
+            "moyenne": 0.0,
+            "n_repetitions": 3,
+            "valeurs": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "vigenere": {
+            "ecart_type": 0.0,
+            "moyenne": 73.33,
+            "n_repetitions": 3,
+            "valeurs": [
+              73.33,
+              73.33,
+              73.33
+            ]
+          }
+        },
+        "par_procede_tranche": {
+          "affine": {
+            "080-119": {
+              "ecart_type": 0.0,
+              "moyenne": 0.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "120-249": {
+              "ecart_type": 0.0,
+              "moyenne": 0.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "1500+": {
+              "ecart_type": 0.0,
+              "moyenne": 0.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "250-499": {
+              "ecart_type": 0.0,
+              "moyenne": 0.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "500-899": {
+              "ecart_type": 0.0,
+              "moyenne": 0.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "900-1499": {
+              "ecart_type": 0.0,
+              "moyenne": 0.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "autoclave": {
+            "080-119": {
+              "ecart_type": 0.0,
+              "moyenne": 0.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "120-249": {
+              "ecart_type": 0.0,
+              "moyenne": 60.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                60.0,
+                60.0,
+                60.0
+              ]
+            },
+            "1500+": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "250-499": {
+              "ecart_type": 0.0,
+              "moyenne": 80.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                80.0,
+                80.0,
+                80.0
+              ]
+            },
+            "500-899": {
+              "ecart_type": 0.0,
+              "moyenne": 80.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                80.0,
+                80.0,
+                80.0
+              ]
+            },
+            "900-1499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            }
+          },
+          "beaufort": {
+            "080-119": {
+              "ecart_type": 0.0,
+              "moyenne": 20.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                20.0,
+                20.0,
+                20.0
+              ]
+            },
+            "120-249": {
+              "ecart_type": 0.0,
+              "moyenne": 20.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                20.0,
+                20.0,
+                20.0
+              ]
+            },
+            "1500+": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "250-499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "500-899": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "900-1499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            }
+          },
+          "cesar": {
+            "080-119": {
+              "ecart_type": 0.0,
+              "moyenne": 20.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                20.0,
+                20.0,
+                20.0
+              ]
+            },
+            "120-249": {
+              "ecart_type": 0.0,
+              "moyenne": 0.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "1500+": {
+              "ecart_type": 11.55,
+              "moyenne": 13.33,
+              "n_repetitions": 3,
+              "valeurs": [
+                0.0,
+                20.0,
+                20.0
+              ]
+            },
+            "250-499": {
+              "ecart_type": 0.0,
+              "moyenne": 0.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "500-899": {
+              "ecart_type": 23.09,
+              "moyenne": 13.33,
+              "n_repetitions": 3,
+              "valeurs": [
+                40.0,
+                0.0,
+                0.0
+              ]
+            },
+            "900-1499": {
+              "ecart_type": 11.55,
+              "moyenne": 6.67,
+              "n_repetitions": 3,
+              "valeurs": [
+                0.0,
+                20.0,
+                0.0
+              ]
+            }
+          },
+          "substitution": {
+            "080-119": {
+              "ecart_type": 0.0,
+              "moyenne": 0.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "120-249": {
+              "ecart_type": 0.0,
+              "moyenne": 0.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "1500+": {
+              "ecart_type": 0.0,
+              "moyenne": 0.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "250-499": {
+              "ecart_type": 0.0,
+              "moyenne": 0.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "500-899": {
+              "ecart_type": 0.0,
+              "moyenne": 0.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "900-1499": {
+              "ecart_type": 0.0,
+              "moyenne": 0.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "vigenere": {
+            "080-119": {
+              "ecart_type": 0.0,
+              "moyenne": 0.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "120-249": {
+              "ecart_type": 0.0,
+              "moyenne": 40.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                40.0,
+                40.0,
+                40.0
+              ]
+            },
+            "1500+": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "250-499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "500-899": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "900-1499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            }
+          }
+        },
+        "par_tranche": {
+          "080-119": {
+            "ecart_type": 0.0,
+            "moyenne": 6.67,
+            "n_repetitions": 3,
+            "valeurs": [
+              6.67,
+              6.67,
+              6.67
+            ]
+          },
+          "120-249": {
+            "ecart_type": 0.0,
+            "moyenne": 20.0,
+            "n_repetitions": 3,
+            "valeurs": [
+              20.0,
+              20.0,
+              20.0
+            ]
+          },
+          "1500+": {
+            "ecart_type": 1.92,
+            "moyenne": 52.22,
+            "n_repetitions": 3,
+            "valeurs": [
+              50.0,
+              53.33,
+              53.33
+            ]
+          },
+          "250-499": {
+            "ecart_type": 0.0,
+            "moyenne": 46.67,
+            "n_repetitions": 3,
+            "valeurs": [
+              46.67,
+              46.67,
+              46.67
+            ]
+          },
+          "500-899": {
+            "ecart_type": 3.85,
+            "moyenne": 48.89,
+            "n_repetitions": 3,
+            "valeurs": [
+              53.33,
+              46.67,
+              46.67
+            ]
+          },
+          "900-1499": {
+            "ecart_type": 1.92,
+            "moyenne": 51.11,
+            "n_repetitions": 3,
+            "valeurs": [
+              50.0,
+              53.33,
+              50.0
+            ]
+          }
+        },
+        "precision_lettres": {
+          "ecart_type": 1.5,
+          "moyenne": 69.74,
+          "n_repetitions": 3,
+          "valeurs": [
+            68.05,
+            70.25,
+            70.91
+          ]
+        },
+        "statuts": {
+          "accepte": 51,
+          "meilleur_effort": 489
+        },
+        "taux_exact": {
+          "ecart_type": 0.32,
+          "moyenne": 37.59,
+          "n_repetitions": 3,
+          "valeurs": [
+            37.78,
+            37.78,
+            37.22
+          ]
+        },
+        "taux_procede_correct": {
+          "ecart_type": 0.32,
+          "moyenne": 64.63,
+          "n_repetitions": 3,
+          "valeurs": [
+            64.44,
+            65.0,
+            64.44
+          ]
+        },
+        "taux_repli": {
+          "ecart_type": 0.0,
+          "moyenne": 0.0,
+          "n_repetitions": 3,
+          "valeurs": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "robustesse_fautes5": {
+      "a_baseline": {
+        "appels_outils_moyens": {
+          "ecart_type": 0.0,
+          "moyenne": 2.08,
+          "n_repetitions": 3,
+          "valeurs": [
+            2.08,
+            2.08,
+            2.08
+          ]
+        },
+        "appels_refuses_total": 0,
+        "contexte_sature_total": 0,
+        "duree_moyenne_s": {
+          "ecart_type": 0.001,
+          "moyenne": 0.454,
+          "n_repetitions": 3,
+          "valeurs": [
+            0.454,
+            0.453,
+            0.454
+          ]
+        },
+        "erreurs_llm_total": 0,
+        "garde_fou_total": 0,
+        "iterations_moyennes": {
+          "ecart_type": 0.0,
+          "moyenne": 2.08,
+          "n_repetitions": 3,
+          "valeurs": [
+            2.08,
+            2.08,
+            2.08
+          ]
+        },
+        "longueur_min_90": {
+          "affine": "080-119",
+          "autoclave": "080-119",
+          "beaufort": "120-249",
+          "cesar": "080-119",
+          "substitution": null,
+          "vigenere": "120-249"
+        },
+        "memoire_ollama_mo": {
+          "ecart_type": 0.0,
+          "moyenne": 0.0,
+          "n_repetitions": 3,
+          "valeurs": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "memoire_pic_totale_mo": 75.5,
+        "memoire_python_mo": {
+          "ecart_type": 0.1,
+          "moyenne": 75.2,
+          "n_repetitions": 3,
+          "valeurs": [
+            75.3,
+            75.1,
+            75.1
+          ]
+        },
+        "n_chiffres": 180,
+        "par_procede": {
+          "affine": {
+            "ecart_type": 0.0,
+            "moyenne": 100.0,
+            "n_repetitions": 3,
+            "valeurs": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          "autoclave": {
+            "ecart_type": 0.0,
+            "moyenne": 100.0,
+            "n_repetitions": 3,
+            "valeurs": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          "beaufort": {
+            "ecart_type": 0.0,
+            "moyenne": 96.67,
+            "n_repetitions": 3,
+            "valeurs": [
+              96.67,
+              96.67,
+              96.67
+            ]
+          },
+          "cesar": {
+            "ecart_type": 0.0,
+            "moyenne": 100.0,
+            "n_repetitions": 3,
+            "valeurs": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          "substitution": {
+            "ecart_type": 1.92,
+            "moyenne": 17.78,
+            "n_repetitions": 3,
+            "valeurs": [
+              16.67,
+              16.67,
+              20.0
+            ]
+          },
+          "vigenere": {
+            "ecart_type": 0.0,
+            "moyenne": 96.67,
+            "n_repetitions": 3,
+            "valeurs": [
+              96.67,
+              96.67,
+              96.67
+            ]
+          }
+        },
+        "par_procede_tranche": {
+          "affine": {
+            "080-119": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "120-249": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "1500+": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "250-499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "500-899": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "900-1499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            }
+          },
+          "autoclave": {
+            "080-119": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "120-249": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "1500+": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "250-499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "500-899": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "900-1499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            }
+          },
+          "beaufort": {
+            "080-119": {
+              "ecart_type": 0.0,
+              "moyenne": 80.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                80.0,
+                80.0,
+                80.0
+              ]
+            },
+            "120-249": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "1500+": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "250-499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "500-899": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "900-1499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            }
+          },
+          "cesar": {
+            "080-119": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "120-249": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "1500+": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "250-499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "500-899": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "900-1499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            }
+          },
+          "substitution": {
+            "080-119": {
+              "ecart_type": 0.0,
+              "moyenne": 0.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "120-249": {
+              "ecart_type": 11.55,
+              "moyenne": 33.33,
+              "n_repetitions": 3,
+              "valeurs": [
+                20.0,
+                40.0,
+                40.0
+              ]
+            },
+            "1500+": {
+              "ecart_type": 11.55,
+              "moyenne": 53.33,
+              "n_repetitions": 3,
+              "valeurs": [
+                60.0,
+                40.0,
+                60.0
+              ]
+            },
+            "250-499": {
+              "ecart_type": 0.0,
+              "moyenne": 20.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                20.0,
+                20.0,
+                20.0
+              ]
+            },
+            "500-899": {
+              "ecart_type": 0.0,
+              "moyenne": 0.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "900-1499": {
+              "ecart_type": 0.0,
+              "moyenne": 0.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "vigenere": {
+            "080-119": {
+              "ecart_type": 0.0,
+              "moyenne": 80.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                80.0,
+                80.0,
+                80.0
+              ]
+            },
+            "120-249": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "1500+": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "250-499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "500-899": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "900-1499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            }
+          }
+        },
+        "par_tranche": {
+          "080-119": {
+            "ecart_type": 0.0,
+            "moyenne": 76.67,
+            "n_repetitions": 3,
+            "valeurs": [
+              76.67,
+              76.67,
+              76.67
+            ]
+          },
+          "120-249": {
+            "ecart_type": 1.92,
+            "moyenne": 88.89,
+            "n_repetitions": 3,
+            "valeurs": [
+              86.67,
+              90.0,
+              90.0
+            ]
+          },
+          "1500+": {
+            "ecart_type": 1.92,
+            "moyenne": 92.22,
+            "n_repetitions": 3,
+            "valeurs": [
+              93.33,
+              90.0,
+              93.33
+            ]
+          },
+          "250-499": {
+            "ecart_type": 0.0,
+            "moyenne": 86.67,
+            "n_repetitions": 3,
+            "valeurs": [
+              86.67,
+              86.67,
+              86.67
+            ]
+          },
+          "500-899": {
+            "ecart_type": 0.0,
+            "moyenne": 83.33,
+            "n_repetitions": 3,
+            "valeurs": [
+              83.33,
+              83.33,
+              83.33
+            ]
+          },
+          "900-1499": {
+            "ecart_type": 0.0,
+            "moyenne": 83.33,
+            "n_repetitions": 3,
+            "valeurs": [
+              83.33,
+              83.33,
+              83.33
+            ]
+          }
+        },
+        "precision_lettres": {
+          "ecart_type": 0.02,
+          "moyenne": 97.87,
+          "n_repetitions": 3,
+          "valeurs": [
+            97.87,
+            97.85,
+            97.88
+          ]
+        },
+        "statuts": {
+          "accepte": 534,
+          "meilleur_effort": 6
+        },
+        "taux_exact": {
+          "ecart_type": 0.32,
+          "moyenne": 85.19,
+          "n_repetitions": 3,
+          "valeurs": [
+            85.0,
+            85.0,
+            85.56
+          ]
+        },
+        "taux_procede_correct": {
+          "ecart_type": 0.0,
+          "moyenne": 99.44,
+          "n_repetitions": 3,
+          "valeurs": [
+            99.44,
+            99.44,
+            99.44
+          ]
+        },
+        "taux_repli": {
+          "ecart_type": 0.0,
+          "moyenne": 0.0,
+          "n_repetitions": 3,
+          "valeurs": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "robustesse_sans_espaces": {
+      "a_baseline": {
+        "appels_outils_moyens": {
+          "ecart_type": 0.0,
+          "moyenne": 2.01,
+          "n_repetitions": 3,
+          "valeurs": [
+            2.01,
+            2.01,
+            2.01
+          ]
+        },
+        "appels_refuses_total": 0,
+        "contexte_sature_total": 0,
+        "duree_moyenne_s": {
+          "ecart_type": 0.0,
+          "moyenne": 0.446,
+          "n_repetitions": 3,
+          "valeurs": [
+            0.446,
+            0.446,
+            0.446
+          ]
+        },
+        "erreurs_llm_total": 0,
+        "garde_fou_total": 0,
+        "iterations_moyennes": {
+          "ecart_type": 0.0,
+          "moyenne": 2.01,
+          "n_repetitions": 3,
+          "valeurs": [
+            2.01,
+            2.01,
+            2.01
+          ]
+        },
+        "longueur_min_90": {
+          "affine": "080-119",
+          "autoclave": "080-119",
+          "beaufort": "120-249",
+          "cesar": "080-119",
+          "substitution": null,
+          "vigenere": "120-249"
+        },
+        "memoire_ollama_mo": {
+          "ecart_type": 0.0,
+          "moyenne": 0.0,
+          "n_repetitions": 3,
+          "valeurs": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "memoire_pic_totale_mo": 75.5,
+        "memoire_python_mo": {
+          "ecart_type": 0.0,
+          "moyenne": 75.5,
+          "n_repetitions": 3,
+          "valeurs": [
+            75.5,
+            75.5,
+            75.5
+          ]
+        },
+        "n_chiffres": 180,
+        "par_procede": {
+          "affine": {
+            "ecart_type": 0.0,
+            "moyenne": 100.0,
+            "n_repetitions": 3,
+            "valeurs": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          "autoclave": {
+            "ecart_type": 0.0,
+            "moyenne": 100.0,
+            "n_repetitions": 3,
+            "valeurs": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          "beaufort": {
+            "ecart_type": 0.0,
+            "moyenne": 96.67,
+            "n_repetitions": 3,
+            "valeurs": [
+              96.67,
+              96.67,
+              96.67
+            ]
+          },
+          "cesar": {
+            "ecart_type": 0.0,
+            "moyenne": 100.0,
+            "n_repetitions": 3,
+            "valeurs": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          "substitution": {
+            "ecart_type": 3.85,
+            "moyenne": 72.22,
+            "n_repetitions": 3,
+            "valeurs": [
+              76.67,
+              70.0,
+              70.0
+            ]
+          },
+          "vigenere": {
+            "ecart_type": 0.0,
+            "moyenne": 96.67,
+            "n_repetitions": 3,
+            "valeurs": [
+              96.67,
+              96.67,
+              96.67
+            ]
+          }
+        },
+        "par_procede_tranche": {
+          "affine": {
+            "080-119": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "120-249": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "1500+": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "250-499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "500-899": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "900-1499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            }
+          },
+          "autoclave": {
+            "080-119": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "120-249": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "1500+": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "250-499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "500-899": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "900-1499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            }
+          },
+          "beaufort": {
+            "080-119": {
+              "ecart_type": 0.0,
+              "moyenne": 80.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                80.0,
+                80.0,
+                80.0
+              ]
+            },
+            "120-249": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "1500+": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "250-499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "500-899": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "900-1499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            }
+          },
+          "cesar": {
+            "080-119": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "120-249": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "1500+": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "250-499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "500-899": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "900-1499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            }
+          },
+          "substitution": {
+            "080-119": {
+              "ecart_type": 11.55,
+              "moyenne": 53.33,
+              "n_repetitions": 3,
+              "valeurs": [
+                60.0,
+                60.0,
+                40.0
+              ]
+            },
+            "120-249": {
+              "ecart_type": 0.0,
+              "moyenne": 80.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                80.0,
+                80.0,
+                80.0
+              ]
+            },
+            "1500+": {
+              "ecart_type": 11.55,
+              "moyenne": 86.67,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                80.0,
+                80.0
+              ]
+            },
+            "250-499": {
+              "ecart_type": 0.0,
+              "moyenne": 80.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                80.0,
+                80.0,
+                80.0
+              ]
+            },
+            "500-899": {
+              "ecart_type": 0.0,
+              "moyenne": 80.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                80.0,
+                80.0,
+                80.0
+              ]
+            },
+            "900-1499": {
+              "ecart_type": 11.55,
+              "moyenne": 53.33,
+              "n_repetitions": 3,
+              "valeurs": [
+                60.0,
+                40.0,
+                60.0
+              ]
+            }
+          },
+          "vigenere": {
+            "080-119": {
+              "ecart_type": 0.0,
+              "moyenne": 80.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                80.0,
+                80.0,
+                80.0
+              ]
+            },
+            "120-249": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "1500+": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "250-499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "500-899": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            },
+            "900-1499": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            }
+          }
+        },
+        "par_tranche": {
+          "080-119": {
+            "ecart_type": 1.92,
+            "moyenne": 85.56,
+            "n_repetitions": 3,
+            "valeurs": [
+              86.67,
+              86.67,
+              83.33
+            ]
+          },
+          "120-249": {
+            "ecart_type": 0.0,
+            "moyenne": 96.67,
+            "n_repetitions": 3,
+            "valeurs": [
+              96.67,
+              96.67,
+              96.67
+            ]
+          },
+          "1500+": {
+            "ecart_type": 1.92,
+            "moyenne": 97.78,
+            "n_repetitions": 3,
+            "valeurs": [
+              100.0,
+              96.67,
+              96.67
+            ]
+          },
+          "250-499": {
+            "ecart_type": 0.0,
+            "moyenne": 96.67,
+            "n_repetitions": 3,
+            "valeurs": [
+              96.67,
+              96.67,
+              96.67
+            ]
+          },
+          "500-899": {
+            "ecart_type": 0.0,
+            "moyenne": 96.67,
+            "n_repetitions": 3,
+            "valeurs": [
+              96.67,
+              96.67,
+              96.67
+            ]
+          },
+          "900-1499": {
+            "ecart_type": 1.92,
+            "moyenne": 92.22,
+            "n_repetitions": 3,
+            "valeurs": [
+              93.33,
+              90.0,
+              93.33
+            ]
+          }
+        },
+        "precision_lettres": {
+          "ecart_type": 0.32,
+          "moyenne": 98.72,
+          "n_repetitions": 3,
+          "valeurs": [
+            99.06,
+            98.42,
+            98.69
+          ]
+        },
+        "statuts": {
+          "accepte": 540
+        },
+        "taux_exact": {
+          "ecart_type": 0.64,
+          "moyenne": 94.26,
+          "n_repetitions": 3,
+          "valeurs": [
+            95.0,
+            93.89,
+            93.89
+          ]
+        },
+        "taux_procede_correct": {
+          "ecart_type": 0.0,
+          "moyenne": 99.44,
+          "n_repetitions": 3,
+          "valeurs": [
+            99.44,
+            99.44,
+            99.44
+          ]
+        },
+        "taux_repli": {
+          "ecart_type": 0.0,
+          "moyenne": 0.0,
+          "n_repetitions": 3,
+          "valeurs": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "b_qwen3_4b": {
+        "appels_outils_moyens": {
+          "ecart_type": 1.62,
+          "moyenne": 11.06,
+          "n_repetitions": 3,
+          "valeurs": [
+            10.67,
+            12.83,
+            9.67
+          ]
+        },
+        "appels_refuses_total": 0,
+        "comparaison_reference": {
+          "n_chiffres_communs": 6,
+          "reference_sur_sous_ensemble": {
+            "ecart_type": 0.0,
+            "moyenne": 83.33,
+            "n_repetitions": 3,
+            "valeurs": [
+              83.33,
+              83.33,
+              83.33
+            ]
+          }
+        },
+        "contexte_sature_total": 18,
+        "duree_moyenne_s": {
+          "ecart_type": 171.329,
+          "moyenne": 498.208,
+          "n_repetitions": 3,
+          "valeurs": [
+            605.651,
+            300.627,
+            588.347
+          ]
+        },
+        "erreurs_llm_total": 6,
+        "garde_fou_total": 0,
+        "iterations_moyennes": {
+          "ecart_type": 0.42,
+          "moyenne": 2.72,
+          "n_repetitions": 3,
+          "valeurs": [
+            2.67,
+            3.17,
+            2.33
+          ]
+        },
+        "longueur_min_90": {
+          "affine": "500-899",
+          "autoclave": "500-899",
+          "beaufort": null,
+          "cesar": "500-899",
+          "substitution": null,
+          "vigenere": "500-899"
+        },
+        "memoire_ollama_mo": {
+          "ecart_type": 0.2,
+          "moyenne": 42.4,
+          "n_repetitions": 3,
+          "valeurs": [
+            42.4,
+            42.5,
+            42.2
+          ]
+        },
+        "memoire_pic_totale_mo": 105.5,
+        "memoire_python_mo": {
+          "ecart_type": 0.1,
+          "moyenne": 61.0,
+          "n_repetitions": 3,
+          "valeurs": [
+            60.9,
+            60.9,
+            61.1
+          ]
+        },
+        "n_chiffres": 6,
+        "par_procede": {
+          "affine": {
+            "ecart_type": 0.0,
+            "moyenne": 100.0,
+            "n_repetitions": 3,
+            "valeurs": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          "autoclave": {
+            "ecart_type": 0.0,
+            "moyenne": 100.0,
+            "n_repetitions": 3,
+            "valeurs": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          "beaufort": {
+            "ecart_type": 57.74,
+            "moyenne": 66.67,
+            "n_repetitions": 3,
+            "valeurs": [
+              100.0,
+              0.0,
+              100.0
+            ]
+          },
+          "cesar": {
+            "ecart_type": 0.0,
+            "moyenne": 100.0,
+            "n_repetitions": 3,
+            "valeurs": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          },
+          "substitution": {
+            "ecart_type": 0.0,
+            "moyenne": 0.0,
+            "n_repetitions": 3,
+            "valeurs": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "vigenere": {
+            "ecart_type": 0.0,
+            "moyenne": 100.0,
+            "n_repetitions": 3,
+            "valeurs": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          }
+        },
+        "par_procede_tranche": {
+          "affine": {
+            "500-899": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            }
+          },
+          "autoclave": {
+            "500-899": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            }
+          },
+          "beaufort": {
+            "500-899": {
+              "ecart_type": 57.74,
+              "moyenne": 66.67,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                0.0,
+                100.0
+              ]
+            }
+          },
+          "cesar": {
+            "500-899": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            }
+          },
+          "substitution": {
+            "500-899": {
+              "ecart_type": 0.0,
+              "moyenne": 0.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "vigenere": {
+            "500-899": {
+              "ecart_type": 0.0,
+              "moyenne": 100.0,
+              "n_repetitions": 3,
+              "valeurs": [
+                100.0,
+                100.0,
+                100.0
+              ]
+            }
+          }
+        },
+        "par_tranche": {
+          "500-899": {
+            "ecart_type": 9.62,
+            "moyenne": 77.78,
+            "n_repetitions": 3,
+            "valeurs": [
+              83.33,
+              66.67,
+              83.33
+            ]
+          }
+        },
+        "precision_lettres": {
+          "ecart_type": 8.76,
+          "moyenne": 94.92,
+          "n_repetitions": 3,
+          "valeurs": [
+            99.97,
+            84.8,
+            99.97
+          ]
+        },
+        "statuts": {
+          "accepte": 16,
+          "meilleur_effort": 2
+        },
+        "taux_exact": {
+          "ecart_type": 9.62,
+          "moyenne": 77.78,
+          "n_repetitions": 3,
+          "valeurs": [
+            83.33,
+            66.67,
+            83.33
+          ]
+        },
+        "taux_procede_correct": {
+          "ecart_type": 9.62,
+          "moyenne": 88.89,
+          "n_repetitions": 3,
+          "valeurs": [
+            100.0,
+            83.33,
+            83.33
+          ]
+        },
+        "taux_repli": {
+          "ecart_type": 9.62,
+          "moyenne": 61.11,
+          "n_repetitions": 3,
+          "valeurs": [
+            50.0,
+            66.67,
+            66.67
+          ]
+        }
+      }
+    }
+  },
+  "explications": {
+    "b_qwen3_4b": {
+      "exercices_valides_pct": 70.0,
+      "n_explications": 10,
+      "taux_exact_echantillon": 100.0
+    }
+  },
+  "kasiski_autoclave": {
+    "autoclave": {
+      "ic_colonnes_vraie_longueur_moyen": 0.0426,
+      "ic_moyen": 0.041,
+      "kasiski_tete_correcte_pct": 13.3,
+      "kasiski_top3_pct": 30.0,
+      "repetitions_moyennes": 40.7
+    },
+    "vigenere": {
+      "ic_colonnes_vraie_longueur_moyen": 0.0754,
+      "ic_moyen": 0.0439,
+      "kasiski_tete_correcte_pct": 63.3,
+      "kasiski_top3_pct": 70.0,
+      "repetitions_moyennes": 97.7
+    }
+  },
+  "longueur_min": {
+    "affine": {
+      "longueur_min_90_procede_connu": 20,
+      "longueur_min_90_reference": 40,
+      "taux_procede_connu": {
+        "20": 100.0,
+        "30": 100.0,
+        "40": 100.0,
+        "60": 100.0,
+        "80": 100.0,
+        "100": 100.0,
+        "150": 100.0,
+        "200": 100.0,
+        "300": 100.0,
+        "400": 100.0,
+        "600": 100.0,
+        "800": 100.0,
+        "1000": 100.0,
+        "1500": 100.0,
+        "2000": 100.0
+      },
+      "taux_reference": {
+        "20": 40.0,
+        "30": 60.0,
+        "40": 100.0,
+        "60": 100.0,
+        "80": 100.0,
+        "100": 100.0,
+        "150": 100.0,
+        "200": 100.0,
+        "300": 100.0,
+        "400": 100.0,
+        "600": 100.0,
+        "800": 100.0,
+        "1000": 100.0,
+        "1500": 100.0,
+        "2000": 100.0
+      }
+    },
+    "autoclave": {
+      "longueur_min_90_procede_connu": 150,
+      "longueur_min_90_reference": 80,
+      "taux_procede_connu": {
+        "20": 20.0,
+        "30": 30.0,
+        "40": 40.0,
+        "60": 100.0,
+        "80": 100.0,
+        "100": 80.0,
+        "150": 100.0,
+        "200": 100.0,
+        "300": 100.0,
+        "400": 100.0,
+        "600": 100.0,
+        "800": 100.0,
+        "1000": 100.0,
+        "1500": 100.0,
+        "2000": 100.0
+      },
+      "taux_reference": {
+        "20": 0.0,
+        "30": 0.0,
+        "40": 0.0,
+        "60": 60.0,
+        "80": 100.0,
+        "100": 100.0,
+        "150": 100.0,
+        "200": 100.0,
+        "300": 100.0,
+        "400": 100.0,
+        "600": 100.0,
+        "800": 100.0,
+        "1000": 100.0,
+        "1500": 100.0,
+        "2000": 100.0
+      }
+    },
+    "beaufort": {
+      "longueur_min_90_procede_connu": 80,
+      "longueur_min_90_reference": 80,
+      "taux_procede_connu": {
+        "20": 0.0,
+        "30": 30.0,
+        "40": 30.0,
+        "60": 80.0,
+        "80": 100.0,
+        "100": 100.0,
+        "150": 100.0,
+        "200": 100.0,
+        "300": 100.0,
+        "400": 100.0,
+        "600": 100.0,
+        "800": 100.0,
+        "1000": 100.0,
+        "1500": 100.0,
+        "2000": 100.0
+      },
+      "taux_reference": {
+        "20": 0.0,
+        "30": 0.0,
+        "40": 0.0,
+        "60": 80.0,
+        "80": 100.0,
+        "100": 100.0,
+        "150": 100.0,
+        "200": 100.0,
+        "300": 100.0,
+        "400": 100.0,
+        "600": 100.0,
+        "800": 100.0,
+        "1000": 100.0,
+        "1500": 100.0,
+        "2000": 100.0
+      }
+    },
+    "cesar": {
+      "longueur_min_90_procede_connu": 20,
+      "longueur_min_90_reference": 60,
+      "taux_procede_connu": {
+        "20": 100.0,
+        "30": 100.0,
+        "40": 100.0,
+        "60": 100.0,
+        "80": 100.0,
+        "100": 100.0,
+        "150": 100.0,
+        "200": 100.0,
+        "300": 100.0,
+        "400": 100.0,
+        "600": 100.0,
+        "800": 100.0,
+        "1000": 100.0,
+        "1500": 100.0,
+        "2000": 100.0
+      },
+      "taux_reference": {
+        "20": 80.0,
+        "30": 80.0,
+        "40": 80.0,
+        "60": 100.0,
+        "80": 100.0,
+        "100": 100.0,
+        "150": 100.0,
+        "200": 100.0,
+        "300": 100.0,
+        "400": 100.0,
+        "600": 100.0,
+        "800": 100.0,
+        "1000": 100.0,
+        "1500": 100.0,
+        "2000": 100.0
+      }
+    },
+    "substitution": {
+      "longueur_min_90_procede_connu": null,
+      "longueur_min_90_reference": null,
+      "taux_procede_connu": {
+        "20": 0.0,
+        "30": 0.0,
+        "40": 0.0,
+        "60": 0.0,
+        "80": 0.0,
+        "100": 30.0,
+        "150": 50.0,
+        "200": 60.0,
+        "300": 80.0,
+        "400": 60.0,
+        "600": 60.0,
+        "800": 80.0,
+        "1000": 100.0,
+        "1500": 80.0,
+        "2000": 70.0
+      },
+      "taux_reference": {
+        "20": 0.0,
+        "30": 0.0,
+        "40": 0.0,
+        "60": 0.0,
+        "80": 0.0,
+        "100": 40.0,
+        "150": 60.0,
+        "200": 80.0,
+        "300": 80.0,
+        "400": 60.0,
+        "600": 100.0,
+        "800": 80.0,
+        "1000": 100.0,
+        "1500": 60.0,
+        "2000": 80.0
+      }
+    },
+    "vigenere": {
+      "longueur_min_90_procede_connu": 80,
+      "longueur_min_90_reference": 80,
+      "taux_procede_connu": {
+        "20": 10.0,
+        "30": 20.0,
+        "40": 40.0,
+        "60": 50.0,
+        "80": 100.0,
+        "100": 100.0,
+        "150": 100.0,
+        "200": 100.0,
+        "300": 100.0,
+        "400": 100.0,
+        "600": 100.0,
+        "800": 100.0,
+        "1000": 100.0,
+        "1500": 100.0,
+        "2000": 100.0
+      },
+      "taux_reference": {
+        "20": 0.0,
+        "30": 40.0,
+        "40": 60.0,
+        "60": 20.0,
+        "80": 100.0,
+        "100": 100.0,
+        "150": 100.0,
+        "200": 100.0,
+        "300": 100.0,
+        "400": 100.0,
+        "600": 100.0,
+        "800": 100.0,
+        "1000": 100.0,
+        "1500": 100.0,
+        "2000": 100.0
+      }
+    }
+  },
+  "resume": {
+    "defaillances_garde_fou_total_b_qwen3_4b": 0,
+    "defaillances_taux_exact_b_qwen3_4b": 88.89,
+    "duree_s_a_baseline": 0.447,
+    "duree_s_b_qwen3_4b": 550.691,
+    "duree_s_c_qwen3_1.7b": 444.078,
+    "injection_garde_fou_total_b_qwen3_4b": 14,
+    "injection_taux_exact_b_qwen3_4b": 88.89,
+    "iterations_a_baseline": 2.03,
+    "iterations_b_qwen3_4b": 2.64,
+    "iterations_c_qwen3_1.7b": 4.39,
+    "kasiski_tete_correcte_autoclave_pct": 13.3,
+    "kasiski_tete_correcte_vigenere_pct": 63.3,
+    "longueur_min_90_affine": 20,
+    "longueur_min_90_autoclave": 150,
+    "longueur_min_90_beaufort": 80,
+    "longueur_min_90_cesar": 20,
+    "longueur_min_90_substitution": null,
+    "longueur_min_90_vigenere": 80,
+    "taux_exact_a_baseline": 93.7,
+    "taux_exact_a_baseline_sur_sous_ensemble_b_qwen3_4b": 100.0,
+    "taux_exact_a_baseline_sur_sous_ensemble_c_qwen3_1.7b": 100.0,
+    "taux_exact_b_qwen3_4b": 97.22,
+    "taux_exact_c_qwen3_1.7b": 88.89
+  },
+  "shannon": {
+    "entropie_estimee_bits": 2.623,
+    "par_longueur_cle": {
+      "10": {
+        "distance_unicite_estimee": 22.6,
+        "distance_unicite_litterature": 13.8,
+        "longueur_min_90": 100,
+        "longueur_min_90_longueur_connue": 100,
+        "taux_longueur_connue": {
+          "20": 0.0,
+          "30": 0.0,
+          "40": 25.0,
+          "60": 65.0,
+          "80": 75.0,
+          "100": 90.0,
+          "150": 100.0,
+          "200": 100.0,
+          "300": 100.0,
+          "400": 100.0,
+          "600": 100.0
+        },
+        "taux_par_longueur_texte": {
+          "20": 0.0,
+          "30": 0.0,
+          "40": 25.0,
+          "60": 65.0,
+          "80": 75.0,
+          "100": 90.0,
+          "150": 100.0,
+          "200": 100.0,
+          "300": 100.0,
+          "400": 100.0,
+          "600": 100.0
+        }
+      },
+      "12": {
+        "distance_unicite_estimee": 27.2,
+        "distance_unicite_litterature": 16.6,
+        "longueur_min_90": 150,
+        "longueur_min_90_longueur_connue": 100,
+        "taux_longueur_connue": {
+          "30": 0.0,
+          "40": 5.0,
+          "60": 30.0,
+          "80": 75.0,
+          "100": 90.0,
+          "150": 100.0,
+          "200": 100.0,
+          "300": 100.0,
+          "400": 100.0,
+          "600": 100.0
+        },
+        "taux_par_longueur_texte": {
+          "30": 0.0,
+          "40": 5.0,
+          "60": 20.0,
+          "80": 75.0,
+          "100": 80.0,
+          "150": 100.0,
+          "200": 100.0,
+          "300": 100.0,
+          "400": 100.0,
+          "600": 100.0
+        }
+      },
+      "3": {
+        "distance_unicite_estimee": 6.8,
+        "distance_unicite_litterature": 4.1,
+        "longueur_min_90": 60,
+        "longueur_min_90_longueur_connue": 20,
+        "taux_longueur_connue": {
+          "20": 90.0,
+          "30": 90.0,
+          "40": 100.0,
+          "60": 100.0,
+          "80": 100.0,
+          "100": 100.0,
+          "150": 100.0,
+          "200": 100.0,
+          "300": 100.0,
+          "400": 100.0,
+          "600": 100.0
+        },
+        "taux_par_longueur_texte": {
+          "20": 55.0,
+          "30": 40.0,
+          "40": 75.0,
+          "60": 95.0,
+          "80": 100.0,
+          "100": 100.0,
+          "150": 100.0,
+          "200": 100.0,
+          "300": 100.0,
+          "400": 100.0,
+          "600": 100.0
+        }
+      },
+      "4": {
+        "distance_unicite_estimee": 9.1,
+        "distance_unicite_litterature": 5.5,
+        "longueur_min_90": 40,
+        "longueur_min_90_longueur_connue": 30,
+        "taux_longueur_connue": {
+          "20": 60.0,
+          "30": 95.0,
+          "40": 100.0,
+          "60": 95.0,
+          "80": 95.0,
+          "100": 100.0,
+          "150": 100.0,
+          "200": 100.0,
+          "300": 100.0,
+          "400": 100.0,
+          "600": 100.0
+        },
+        "taux_par_longueur_texte": {
+          "20": 40.0,
+          "30": 40.0,
+          "40": 90.0,
+          "60": 100.0,
+          "80": 100.0,
+          "100": 100.0,
+          "150": 100.0,
+          "200": 100.0,
+          "300": 100.0,
+          "400": 100.0,
+          "600": 100.0
+        }
+      },
+      "5": {
+        "distance_unicite_estimee": 11.3,
+        "distance_unicite_litterature": 6.9,
+        "longueur_min_90": 60,
+        "longueur_min_90_longueur_connue": 40,
+        "taux_longueur_connue": {
+          "20": 25.0,
+          "30": 70.0,
+          "40": 95.0,
+          "60": 100.0,
+          "80": 100.0,
+          "100": 100.0,
+          "150": 100.0,
+          "200": 100.0,
+          "300": 100.0,
+          "400": 100.0,
+          "600": 100.0
+        },
+        "taux_par_longueur_texte": {
+          "20": 15.0,
+          "30": 35.0,
+          "40": 55.0,
+          "60": 90.0,
+          "80": 100.0,
+          "100": 100.0,
+          "150": 100.0,
+          "200": 100.0,
+          "300": 100.0,
+          "400": 100.0,
+          "600": 100.0
+        }
+      },
+      "6": {
+        "distance_unicite_estimee": 13.6,
+        "distance_unicite_litterature": 8.3,
+        "longueur_min_90": 60,
+        "longueur_min_90_longueur_connue": 60,
+        "taux_longueur_connue": {
+          "20": 20.0,
+          "30": 50.0,
+          "40": 70.0,
+          "60": 90.0,
+          "80": 100.0,
+          "100": 100.0,
+          "150": 100.0,
+          "200": 100.0,
+          "300": 100.0,
+          "400": 100.0,
+          "600": 100.0
+        },
+        "taux_par_longueur_texte": {
+          "20": 10.0,
+          "30": 15.0,
+          "40": 50.0,
+          "60": 90.0,
+          "80": 100.0,
+          "100": 100.0,
+          "150": 100.0,
+          "200": 100.0,
+          "300": 100.0,
+          "400": 100.0,
+          "600": 100.0
+        }
+      },
+      "8": {
+        "distance_unicite_estimee": 18.1,
+        "distance_unicite_litterature": 11.1,
+        "longueur_min_90": 80,
+        "longueur_min_90_longueur_connue": 80,
+        "taux_longueur_connue": {
+          "20": 0.0,
+          "30": 35.0,
+          "40": 55.0,
+          "60": 80.0,
+          "80": 100.0,
+          "100": 100.0,
+          "150": 100.0,
+          "200": 100.0,
+          "300": 100.0,
+          "400": 100.0,
+          "600": 100.0
+        },
+        "taux_par_longueur_texte": {
+          "20": 0.0,
+          "30": 25.0,
+          "40": 45.0,
+          "60": 70.0,
+          "80": 100.0,
+          "100": 100.0,
+          "150": 100.0,
+          "200": 100.0,
+          "300": 100.0,
+          "400": 100.0,
+          "600": 100.0
+        }
+      }
+    },
+    "redondance_estimee_bits": 2.077,
+    "redondance_litterature_bits": 3.4
+  },
+  "version": "1.0.0"
+}

@@ -1,0 +1,43 @@
+{
+  "mode": "complet",
+  "python": "3.12.3",
+  "plateforme": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.39",
+  "processeur": "x86_64",
+  "coeurs": 4,
+  "memoire_totale_go": 15.6,
+  "ollama_version": "0.40.16",
+  "modeles": {
+    "qwen3:1.7b": {
+      "digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+      "taille_octets": 1359293444,
+      "quantification": "Q4_K_M"
+    },
+    "qwen3:4b": {
+      "digest": "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7",
+      "taille_octets": 2497293931,
+      "quantification": "Q4_K_M"
+    }
+  },
+  "modeles_declares": {
+    "b_qwen3_4b": {
+      "modele": "qwen3:4b",
+      "digest": "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7"
+    },
+    "c_qwen3_1.7b": {
+      "modele": "qwen3:1.7b",
+      "digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7"
+    }
+  },
+  "dependances": {
+    "numpy": "2.5.4",
+    "pydantic": "2.14.3",
+    "pyyaml": "6.0.3",
+    "matplotlib": "3.11.2",
+    "py-minisign": "0.21.1",
+    "psutil": "7.2.2",
+    "pytest": "9.2.0"
+  },
+  "commit": "380f2e56f0c4a675a82d1ad36813620a194dd359",
+  "graine": 42,
+  "repetitions": 3
+}
