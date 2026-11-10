@@ -1,0 +1,34 @@
+name: Vérification Zenodo
+
+# Retrouve l'archive Zenodo de la version demandée, calcule son SHA-256 et
+# affiche le DOI (valeurs reportées dans la fiche de dépôt).
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "version (tag)"
+        default: "v1.0.0"
+
+jobs:
+  zenodo:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: DOI et SHA-256 de l'archive Zenodo
+        run: |
+          python3 - <<'PY'
+          import hashlib, json, os, urllib.request, urllib.parse
+          v = "${{ inputs.version }}"
+          q = urllib.parse.quote('"drozanski75/vigenere-squad"')
+          url = f"https://zenodo.org/api/records?q={q}&sort=mostrecent&size=20&all_versions=true"
+          recs = json.load(urllib.request.urlopen(url, timeout=60))["hits"]["hits"]
+          print("enregistrements :", [(r["metadata"].get("version"), r.get("doi")) for r in recs])
+          r = next(r for r in recs if r["metadata"].get("version") in (v, v.lstrip("v")))
+          f = r["files"][0]
+          data = urllib.request.urlopen(f["links"]["self"], timeout=600).read()
+          res = {"version": v, "doi": r["doi"], "doi_url": "https://doi.org/" + r["doi"], "record": r["links"]["html"],
+                 "fichier": f["key"], "taille": len(data), "sha256": hashlib.sha256(data).hexdigest(),
+                 "md5_zenodo": f.get("checksum")}
+          print("RESULTAT", json.dumps(res))
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a") as s:
+              s.write("\n".join(f"- **{k}** : `{x}`" for k, x in res.items()))
+          PY
