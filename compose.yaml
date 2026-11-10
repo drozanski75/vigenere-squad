@@ -1,0 +1,29 @@
+# Exécution identique sur tout ordinateur disposant de Docker (Windows, macOS, Linux), sans GPU :
+#   docker compose run --rm vsquad reproduire --petit     # évaluation réduite (~15-30 min)
+#   docker compose run --rm vsquad reproduire             # évaluation complète
+#   docker compose run --rm vsquad casser --texte "..."   # casser un chiffré
+# Les résultats sont écrits dans le dossier du dépôt (volume monté).
+services:
+  ollama:
+    image: ollama/ollama:0.12.6
+    volumes:
+      - ollama-modeles:/root/.ollama
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 5s
+      retries: 30
+  vsquad:
+    build: .
+    environment:
+      OLLAMA_HOST: http://ollama:11434
+    volumes:
+      - ./results:/app/results
+      - ./traces:/app/traces
+      - ./site:/app/site
+      - ./build:/app/build
+      - ./data/corpus:/app/data/corpus
+    depends_on:
+      ollama:
+        condition: service_healthy
+volumes:
+  ollama-modeles:
