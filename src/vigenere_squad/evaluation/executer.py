@@ -227,7 +227,12 @@ def config_petite(cfg: dict) -> dict:
 
 
 # --- Expériences ---------------------------------------------------------------------------
-def experience_principale(cfg: dict, configs: list[str] | None = None, simule: bool = False) -> None:
+def _reps(cfg: dict, reps: list[int] | None, n: int | None = None) -> list[int]:
+    return [r for r in range(n if n is not None else cfg["repetitions"]) if reps is None or r in reps]
+
+
+def experience_principale(cfg: dict, configs: list[str] | None = None, simule: bool = False,
+                          reps: list[int] | None = None) -> None:
     ex = cfg["experiences"]["principal"]
     corpus = _preparer(charger_variante(ex["variante"]))
     for nom, conf in cfg["configurations"].items():
@@ -235,11 +240,12 @@ def experience_principale(cfg: dict, configs: list[str] | None = None, simule: b
             continue
         sel = corpus if conf["type"] == "baseline" else sous_ensemble(corpus, ex["par_cellule_agents"],
                                                                      ex.get("longueurs_agents"))
-        for rep in range(cfg["repetitions"]):
+        for rep in _reps(cfg, reps):
             executer_lot("principal", nom, conf, sel, rep, cfg, simule)
 
 
-def experience_robustesse(cfg: dict, simule: bool = False, configs: list[str] | None = None) -> None:
+def experience_robustesse(cfg: dict, simule: bool = False, configs: list[str] | None = None,
+                          reps: list[int] | None = None) -> None:
     ex = cfg["experiences"]["robustesse"]
     for variante in ex["variantes"]:
         corpus = charger_variante(variante)
@@ -257,20 +263,20 @@ def experience_robustesse(cfg: dict, simule: bool = False, configs: list[str] | 
                     continue  # robustesse des agents limitée aux variantes déclarées  # le système est conçu pour le français : seule la référence teste le modèle anglais
                 sel = c if conf["type"] == "baseline" else sous_ensemble(c, ex["par_cellule_agents"],
                                                                           ex.get("longueurs_agents"))
-                for rep in range(cfg["repetitions"]):
+                for rep in _reps(cfg, reps):
                     executer_lot(nom_exp, nom, conf, sel, rep, cfg, simule)
 
 
-def experience_defaillances(cfg: dict, simule: bool = False) -> None:
+def experience_defaillances(cfg: dict, simule: bool = False, reps: list[int] | None = None) -> None:
     ex = cfg["experiences"]["defaillances"]
     conf = cfg["configurations"][ex["configuration"]]
     corpus = sous_ensemble(_preparer(charger_variante("standard")), ex["par_cellule"], ex.get("longueurs"))
-    for rep in range(ex["repetitions"]):
+    for rep in _reps(cfg, reps, ex["repetitions"]):
         executer_lot("defaillances", ex["configuration"], conf, corpus, rep, cfg, simule,
                      fautes={"llm": ex["taux_fautes_llm"], "outils": ex["taux_fautes_outils"]})
 
 
-def experience_injection(cfg: dict, simule: bool = False) -> None:
+def experience_injection(cfg: dict, simule: bool = False, reps: list[int] | None = None) -> None:
     """M1/M2 : une consigne malveillante est ajoutée à chaque sortie de
     score_quadrigrammes. Mesure : garde-fous déclenchés et taux de succès."""
     ex = cfg["experiences"]["injection"]
@@ -278,7 +284,7 @@ def experience_injection(cfg: dict, simule: bool = False) -> None:
     corpus = [e for e in sous_ensemble(_preparer(charger_variante("standard")), ex["par_cellule"],
                                        ex.get("longueurs"))
               if e["procede"] in ex["procedes"]]
-    for rep in range(cfg["repetitions"]):
+    for rep in _reps(cfg, reps):
         executer_lot("injection", ex["configuration"], conf, corpus, rep, cfg, simule, injection=True)
 
 
@@ -478,3 +484,28 @@ def _executer_tout(cfg: dict, simule: bool, avec_llm: bool, noter) -> None:
         print("== Explications")
         experience_explications(cfg, simule)
         noter()
+
+
+def executer_morceau(cfg: dict, experience: str, config: str | None = None, rep: int | None = None,
+                     simule: bool = False) -> None:
+    """Exécute une partie de l'évaluation (calcul parallèle, ex. sur plusieurs serveurs d'intégration
+    continue) ; les fichiers produits sont ceux de l'évaluation complète et s'agrègent tels quels."""
+    reps = None if rep is None else [rep]
+    if experience == "deterministes":
+        experience_shannon(cfg)
+        experience_longueur_min(cfg)
+        experience_kasiski_autoclave(cfg)
+        experience_principale(cfg, ["a_baseline"], simule)
+        experience_robustesse(cfg, simule, ["a_baseline"])
+    elif experience == "principal":
+        experience_principale(cfg, [config], simule, reps)
+    elif experience == "robustesse":
+        experience_robustesse(cfg, simule, [config], reps)
+    elif experience == "defaillances":
+        experience_defaillances(cfg, simule, reps)
+    elif experience == "injection":
+        experience_injection(cfg, simule, reps)
+    elif experience == "explications":
+        experience_explications(cfg, simule)
+    else:
+        raise ValueError(f"expérience inconnue : {experience}")

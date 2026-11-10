@@ -1,0 +1,126 @@
+name: Évaluation complète (calcul parallèle)
+
+# Exécute toute l'évaluation de config/experiment.yaml sur des serveurs GitHub
+# (CPU, sans GPU), en parallèle, puis agrège les résultats et les publie dans le dépôt.
+# Lancement : onglet Actions > « Évaluation complète » > Run workflow.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  deterministes:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: echo "{\"job\":\"deterministes\",\"debut\":$(date +%s)}" > debut.json
+      - run: uv run --frozen vsquad donnees
+      - run: uv run --frozen vsquad evaluer --experience deterministes
+      - run: |
+          mkdir -p results/execution
+          python3 -c "import json,time;d=json.load(open('debut.json'));d['fin']=int(time.time());json.dump(d,open('results/execution/deterministes.json','w'))"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: morceau-deterministes
+          path: |
+            results/
+            traces/
+
+  agents:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {id: principal-b-0, experience: principal, config: b_qwen3_4b, rep: 0, modeles: "qwen3:4b qwen3:1.7b", env: true}
+          - {id: principal-b-1, experience: principal, config: b_qwen3_4b, rep: 1, modeles: "qwen3:4b"}
+          - {id: principal-b-2, experience: principal, config: b_qwen3_4b, rep: 2, modeles: "qwen3:4b"}
+          - {id: principal-c-0, experience: principal, config: c_qwen3_1.7b, rep: 0, modeles: "qwen3:1.7b"}
+          - {id: principal-c-1, experience: principal, config: c_qwen3_1.7b, rep: 1, modeles: "qwen3:1.7b"}
+          - {id: principal-c-2, experience: principal, config: c_qwen3_1.7b, rep: 2, modeles: "qwen3:1.7b"}
+          - {id: robustesse-0, experience: robustesse, config: b_qwen3_4b, rep: 0, modeles: "qwen3:4b"}
+          - {id: robustesse-1, experience: robustesse, config: b_qwen3_4b, rep: 1, modeles: "qwen3:4b"}
+          - {id: robustesse-2, experience: robustesse, config: b_qwen3_4b, rep: 2, modeles: "qwen3:4b"}
+          - {id: defaillances-0, experience: defaillances, config: "", rep: 0, modeles: "qwen3:4b"}
+          - {id: defaillances-1, experience: defaillances, config: "", rep: 1, modeles: "qwen3:4b"}
+          - {id: defaillances-2, experience: defaillances, config: "", rep: 2, modeles: "qwen3:4b"}
+          - {id: injection-0, experience: injection, config: "", rep: 0, modeles: "qwen3:4b"}
+          - {id: injection-1, experience: injection, config: "", rep: 1, modeles: "qwen3:4b"}
+          - {id: injection-2, experience: injection, config: "", rep: 2, modeles: "qwen3:4b"}
+          - {id: explications, experience: explications, config: "", rep: "", modeles: "qwen3:4b"}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: echo "{\"job\":\"${{ matrix.id }}\",\"debut\":$(date +%s)}" > debut.json
+      - name: Installer et démarrer Ollama, télécharger le(s) modèle(s)
+        run: |
+          curl -fsSL https://ollama.com/install.sh | sh
+          (ollama serve > ollama.log 2>&1 &)
+          for i in $(seq 1 30); do curl -fsS http://127.0.0.1:11434/api/version && break; sleep 2; done
+          for m in ${{ matrix.modeles }}; do ollama pull "$m"; done
+      - run: uv run --frozen vsquad donnees
+      - if: ${{ matrix.env }}
+        run: uv run --frozen vsquad environnement
+      - name: Évaluation (${{ matrix.id }})
+        run: |
+          ARGS="--experience ${{ matrix.experience }}"
+          [ -n "${{ matrix.config }}" ] && ARGS="$ARGS --config ${{ matrix.config }}"
+          [ -n "${{ matrix.rep }}" ] && ARGS="$ARGS --rep ${{ matrix.rep }}"
+          uv run --frozen vsquad evaluer $ARGS
+      - if: always()
+        run: |
+          mkdir -p results/execution
+          python3 -c "import json,time;d=json.load(open('debut.json'));d['fin']=int(time.time());json.dump(d,open('results/execution/${{ matrix.id }}.json','w'))"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: morceau-${{ matrix.id }}
+          path: |
+            results/
+            traces/
+            ollama.log
+
+  agreger:
+    needs: [deterministes, agents]
+    if: always()
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: morceau-*
+          merge-multiple: true
+          path: .
+      - run: uv run --frozen vsquad donnees > /dev/null
+      - name: Bilan d'exécution (durée réelle, calcul cumulé)
+        run: |
+          python3 - <<'PY'
+          import json, glob, statistics as st
+          j = [json.load(open(f)) for f in glob.glob("results/execution/*.json")]
+          debut, fin = min(x["debut"] for x in j), max(x.get("fin", x["debut"]) for x in j)
+          raw = [json.loads(l) for f in glob.glob("results/raw/*/*_rep*.jsonl") for l in open(f) if l.strip()]
+          ol = [l.get("rss_ollama_mo") or 0 for l in raw]
+          py = [l.get("rss_python_mo") or 0 for l in raw]
+          bilan = {"mode": "complet (calcul parallèle, GitHub Actions)", "serveurs": len(j),
+                   "duree_totale_min": round((fin - debut) / 60, 1),
+                   "calcul_cumule_min": round(sum(x.get("fin", x["debut"]) - x["debut"] for x in j) / 60, 1),
+                   "rss_max_python_mo": max(py or [0]), "memoire_max_ollama_mo": max(ol or [0]),
+                   "run_id": "${{ github.run_id }}"}
+          json.dump(bilan, open("results/EXECUTION.json", "w"), indent=2, ensure_ascii=False)
+          print(bilan)
+          PY
+      - run: uv run --frozen vsquad metriques
+      - run: uv run --frozen vsquad site
+      - name: Publier les résultats dans le dépôt
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
+          git add results traces site
+          git commit -m "Résultats de l'évaluation complète (GitHub Actions, run ${{ github.run_id }})" || exit 0
+          git pull --rebase origin main
+          git push origin HEAD:main

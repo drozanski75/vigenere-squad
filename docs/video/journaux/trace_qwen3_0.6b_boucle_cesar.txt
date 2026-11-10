@@ -1,0 +1,56 @@
+[  0.003s] orchestrateur  ** debut {"mode": "agents", "llm": "ollama:qwen3:0.6b", "langue": "fr"}
+[  0.003s] classifieur    .. réfléchit (prompt v1.3.0)
+[   1.39s] classifieur    -> indice_coincidence({})
+[   1.39s] classifieur    <- indice_coincidence  {"ic": 0.04069}
+[  1.391s] classifieur    -> frequences({})
+[  1.392s] classifieur    <- frequences  {"ordre": "CBZMNSWAKQJIPVOYDRXHTUGELF"}
+[  3.422s] classifieur    == {"famille": "mono", "procedes_probables": ["cesar", "affine", "substitution"], "justification": "Le texte chiffré présente une fréquence de lettres essentielles comme 'E' (0,078 IC) et est monoalphabétique."}
+[  3.423s] cryptanalyste  .. réfléchit (prompt v1.3.0)
+[  4.731s] cryptanalyste  !! arguments_invalides 1 validation error for ArgsLongueurs
+longueur_lettres
+  Extra inputs are not permitted [type=extra_forbidden, input_value=300, input_type=int]
+    For further information visit https://errors.pydantic.dev/2.14/v/extra_forbidden
+[ 12.576s] cryptanalyste  == {"id_resultat": "R1", "procede": "vigenere", "justification": "La clé est testée avec longueur de 300, ce qui correspond au test de Kasiski et de Friedman."}
+[ 12.577s] cryptanalyste  !! repli identifiant de résultat invalide ou déjà rejeté : R1
+[ 12.578s] orchestrateur  <- chi2_cesar R1 {"procede": "cesar", "cle": "9", "score_normalise": 0.058}
+[ 12.579s] linguiste      .. réfléchit (prompt v1.3.0)
+[ 13.746s] linguiste      -> score_quadrigrammes({"id_resultat": "R1"})
+[ 13.747s] linguiste      <- score_quadrigrammes  {"score_normalise": 0.058}
+[ 18.257s] linguiste      == {"plausible": true, "justification": "<1 phrase>", "procede_suivant": null}
+[ 18.257s] orchestrateur  !! garde_fou « plausible » refusé : score trop bas
+[ 18.258s] orchestrateur  ** decision {"id_resultat": "R1", "plausible": false}
+[ 18.258s] orchestrateur  ** nouvelle_hypothese {"rejete": "cesar", "iteration": 1}
+[ 18.259s] cryptanalyste  .. réfléchit (prompt v1.3.0)
+[ 20.186s] cryptanalyste  -> chi2_cesar({})
+[ 20.188s] cryptanalyste  <- chi2_cesar R2 {"procede": "cesar", "cle": "9", "score_normalise": 0.058}
+[ 22.101s] cryptanalyste  == {"id_resultat": "R2", "procede": "cesar", "justification": "Le score normalise est très faible, indiquant une bonne performance."}
+[ 22.101s] linguiste      .. réfléchit (prompt v1.3.0)
+[ 23.156s] linguiste      -> score_quadrigrammes({"id_resultat": "R2"})
+[ 23.157s] linguiste      <- score_quadrigrammes  {"score_normalise": 0.058}
+[ 27.222s] linguiste      == {"plausible": true, "justification": "<1 phrase>", "procede_suivant": null}
+[ 27.223s] orchestrateur  !! garde_fou « plausible » refusé : score trop bas
+[ 27.223s] orchestrateur  ** decision {"id_resultat": "R2", "plausible": false}
+[ 27.224s] orchestrateur  ** nouvelle_hypothese {"rejete": "cesar", "iteration": 2}
+[ 27.224s] cryptanalyste  .. réfléchit (prompt v1.3.0)
+[ 28.853s] cryptanalyste  -> chi2_cesar({})
+[ 28.854s] cryptanalyste  <- chi2_cesar R3 {"procede": "cesar", "cle": "9", "score_normalise": 0.058}
+[ 30.837s] cryptanalyste  == {"id_resultat": "R3", "procede": "cesar", "justification": "Le score normalise est très faible, ce qui suggère une bonne performance de l'attaque."}
+[ 30.837s] linguiste      .. réfléchit (prompt v1.3.0)
+[ 31.908s] linguiste      -> score_quadrigrammes({"id_resultat": "R3"})
+[ 31.909s] linguiste      <- score_quadrigrammes  {"score_normalise": 0.058}
+[ 35.953s] linguiste      == {"plausible": true, "justification": "<1 phrase>", "procede_suivant": null}
+[ 35.954s] orchestrateur  !! garde_fou « plausible » refusé : score trop bas
+[ 35.954s] orchestrateur  ** decision {"id_resultat": "R3", "plausible": false}
+[ 35.955s] orchestrateur  ** nouvelle_hypothese {"rejete": "cesar", "iteration": 3}
+[ 35.955s] cryptanalyste  .. réfléchit (prompt v1.3.0)
+[ 37.549s] cryptanalyste  -> chi2_cesar({})
+[  37.55s] cryptanalyste  <- chi2_cesar R4 {"procede": "cesar", "cle": "9", "score_normalise": 0.058}
+[ 39.545s] cryptanalyste  == {"id_resultat": "R4", "procede": "cesar", "justification": "L'attaque de César est rejetée avec χ² (26 décalages) et score de 0.058."}
+[ 39.546s] linguiste      .. réfléchit (prompt v1.3.0)
+[ 40.639s] linguiste      -> score_quadrigrammes({"id_resultat": "R4"})
+[  40.64s] linguiste      <- score_quadrigrammes  {"score_normalise": 0.058}
+[ 44.797s] linguiste      == {"plausible": true, "justification": "<1 phrase>", "procede_suivant": null}
+[ 44.798s] orchestrateur  !! garde_fou « plausible » refusé : score trop bas
+[ 44.798s] orchestrateur  ** decision {"id_resultat": "R4", "plausible": false}
+[ 44.798s] orchestrateur  ** nouvelle_hypothese {"rejete": "cesar", "iteration": 4}
+[ 44.799s] orchestrateur  ** fin {"statut": "meilleur_effort", "procede": "cesar", "cle": "9", "iterations": 4, "duree_s": 44.796}

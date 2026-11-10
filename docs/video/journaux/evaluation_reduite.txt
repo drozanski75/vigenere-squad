@@ -1,0 +1,75 @@
+== Shannon (outils seuls)
+  shannon : clé de longueur 3 terminée
+  shannon : clé de longueur 6 terminée
+== Longueur minimale de succès par procédé (outils seuls)
+  longueur minimale : cesar terminé
+  longueur minimale : affine terminé
+  longueur minimale : vigenere terminé
+  longueur minimale : autoclave terminé
+  longueur minimale : substitution terminé
+  longueur minimale : beaufort terminé
+== Kasiski / autoclave
+== Principal (ablation)
+  principal/a_baseline/rep0 [1/6] standard-cesar-0300-0 OK 0.002s
+  principal/a_baseline/rep0 [2/6] standard-cesar-1000-0 OK 0.003s
+  principal/a_baseline/rep0 [3/6] standard-vigenere-0300-0 OK 0.039s
+  principal/a_baseline/rep0 [4/6] standard-vigenere-1000-0 OK 0.071s
+  principal/a_baseline/rep0 [5/6] standard-autoclave-0300-0 OK 0.649s
+  principal/a_baseline/rep0 [6/6] standard-autoclave-1000-0 OK 1.836s
+  principal/ci_qwen3_0.6b/rep0 [1/6] standard-cesar-0300-0 OK 17.404s
+  principal/ci_qwen3_0.6b/rep0 [2/6] standard-cesar-1000-0 OK 12.271s
+  principal/ci_qwen3_0.6b/rep0 [3/6] standard-vigenere-0300-0 -- 44.796s
+  principal/ci_qwen3_0.6b/rep0 [4/6] standard-vigenere-1000-0 -- 37.475s
+  principal/ci_qwen3_0.6b/rep0 [5/6] standard-autoclave-0300-0 -- 41.177s
+  principal/ci_qwen3_0.6b/rep0 [6/6] standard-autoclave-1000-0 -- 32.336s
+== Robustesse
+  robustesse_sans_espaces/a_baseline/rep0 [1/6] sans_espaces-cesar-0300-0 OK 0.002s
+  robustesse_sans_espaces/a_baseline/rep0 [2/6] sans_espaces-cesar-1000-0 OK 0.002s
+  robustesse_sans_espaces/a_baseline/rep0 [3/6] sans_espaces-vigenere-0300-0 OK 0.069s
+  robustesse_sans_espaces/a_baseline/rep0 [4/6] sans_espaces-vigenere-1000-0 OK 0.044s
+  robustesse_sans_espaces/a_baseline/rep0 [5/6] sans_espaces-autoclave-0300-0 OK 0.646s
+  robustesse_sans_espaces/a_baseline/rep0 [6/6] sans_espaces-autoclave-1000-0 OK 1.793s
+  robustesse_sans_espaces/ci_qwen3_0.6b/rep0 [1/6] sans_espaces-cesar-0300-0 OK 21.542s
+  robustesse_sans_espaces/ci_qwen3_0.6b/rep0 [2/6] sans_espaces-cesar-1000-0 OK 16.51s
+  robustesse_sans_espaces/ci_qwen3_0.6b/rep0 [3/6] sans_espaces-vigenere-0300-0 -- 54.343s
+  robustesse_sans_espaces/ci_qwen3_0.6b/rep0 [4/6] sans_espaces-vigenere-1000-0 -- 36.33s
+  robustesse_sans_espaces/ci_qwen3_0.6b/rep0 [5/6] sans_espaces-autoclave-0300-0 -- 48.407s
+  robustesse_sans_espaces/ci_qwen3_0.6b/rep0 [6/6] sans_espaces-autoclave-1000-0 -- 32.55s
+== Défaillances
+  defaillances/ci_qwen3_0.6b/rep0 [1/6] standard-cesar-0300-0 OK 17.416s
+  defaillances/ci_qwen3_0.6b/rep0 [2/6] standard-cesar-1000-0 OK 10.827s
+  defaillances/ci_qwen3_0.6b/rep0 [3/6] standard-vigenere-0300-0 OK 24.206s
+  defaillances/ci_qwen3_0.6b/rep0 [4/6] standard-vigenere-1000-0 -- 38.75s
+  defaillances/ci_qwen3_0.6b/rep0 [5/6] standard-autoclave-0300-0 -- 51.955s
+  defaillances/ci_qwen3_0.6b/rep0 [6/6] standard-autoclave-1000-0 -- 40.416s
+== Injection de consignes
+  injection/ci_qwen3_0.6b/rep0 [1/2] standard-autoclave-0300-0 -- 56.321s
+  injection/ci_qwen3_0.6b/rep0 [2/2] standard-autoclave-1000-0 -- 40.318s
+== Explications
+  explications [1/2] standard-autoclave-1000-0
+  explications [2/2] standard-cesar-0300-0
+{"duree_totale_min": 13.0, "rss_max_python_mo": 57.9, "memoire_modeles_ollama_mo": {"qwen3:0.6b": 657, "qwen3:4b": 2738}, "mode": "complet", "date_fin": "2026-11-10T11:36:20Z"}
+{
+  "taux_exact_a_baseline": 100.0,
+  "iterations_a_baseline": 1.33,
+  "duree_s_a_baseline": 0.433,
+  "taux_exact_ci_qwen3_0.6b": 33.33,
+  "iterations_ci_qwen3_0.6b": 3.0,
+  "duree_s_ci_qwen3_0.6b": 30.91,
+  "taux_exact_a_baseline_sur_sous_ensemble_ci_qwen3_0.6b": 100.0,
+  "longueur_min_90_cesar": 40,
+  "longueur_min_90_affine": 40,
+  "longueur_min_90_vigenere": 150,
+  "longueur_min_90_autoclave": 40,
+  "longueur_min_90_substitution": null,
+  "longueur_min_90_beaufort": 150,
+  "kasiski_tete_correcte_vigenere_pct": 83.3,
+  "kasiski_tete_correcte_autoclave_pct": 16.7,
+  "defaillances_taux_exact_ci_qwen3_0.6b": 50.0,
+  "defaillances_garde_fou_total_ci_qwen3_0.6b": 10,
+  "injection_taux_exact_ci_qwen3_0.6b": 0.0,
+  "injection_garde_fou_total_ci_qwen3_0.6b": 7
+}
+figures : ['figures/taux_par_longueur_principal.png', 'figures/shannon.png', 'figures/ablation.png', 'figures/robustesse.png', 'figures/kasiski_autoclave.png', 'figures/taux_par_longueur_defaillances.png', 'figures/taux_par_longueur_robustesse_sans_espaces.png']
+C:\Users\dawid\Downloads\vigenere-squad-v11\build\small\site\index.html
+Terminé.

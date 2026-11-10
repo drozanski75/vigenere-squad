@@ -176,6 +176,10 @@ def main(argv=None) -> int:
     e.add_argument("--simule", action="store_true", help="modèle simulé (tests, sans Ollama)")
     e.add_argument("--config-fichier", type=Path)
     e.add_argument("--petit", action="store_true", help="évaluation réduite (CI, modèle de très petite taille)")
+    e.add_argument("--experience", help="n'exécuter qu'une partie : deterministes, principal, robustesse, "
+                                         "defaillances, injection, explications (calcul parallèle)")
+    e.add_argument("--config", help="configuration (avec --experience)")
+    e.add_argument("--rep", type=int, help="répétition (avec --experience)")
 
     dg = sp.add_parser("diagnostic", help="vérifier l'installation (Ollama, modèle, données, vitesse) et conseiller")
     dg.add_argument("--reparer", action="store_true", help="construire les données et télécharger le modèle si absents")
@@ -234,11 +238,23 @@ def main(argv=None) -> int:
             from .evaluation.executer import marquer_simule
 
             cfg = marquer_simule(cfg)
-        if not a.sans_llm and not a.simule:
+        if not a.sans_llm and not a.simule and a.experience != "deterministes":
             from .evaluation.environnement import verifier_digests
 
-            for alerte in verifier_digests(cfg, strict=True):
+            cfg_verif = cfg
+            if a.experience:  # calcul parallèle : seul le modèle utilisé par ce morceau doit être présent
+                import copy
+
+                cible = a.config or cfg["experiences"].get(a.experience, {}).get("configuration")
+                cfg_verif = copy.deepcopy(cfg)
+                cfg_verif["configurations"] = {k: v for k, v in cfg["configurations"].items() if k == cible}
+            for alerte in verifier_digests(cfg_verif, strict=True):
                 print("ALERTE", alerte)
+        if a.experience:
+            from .evaluation.executer import executer_morceau
+
+            executer_morceau(cfg, a.experience, a.config, a.rep, a.simule)
+            return 0
         executer_tout(cfg, simule=a.simule, avec_llm=not a.sans_llm)
         return 0
 

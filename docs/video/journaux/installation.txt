@@ -1,0 +1,31 @@
+================================================================
+ Vigenere-Squad : installation
+ Dossier : C:\Users\dawid\Downloads\vigenere-squad-v11
+================================================================
+
+[1/5] uv (gestionnaire Python)
+      uv : OK
+
+[2/5] Ollama (modele de langage local) et Git
+      Ollama : OK
+      Git : OK
+
+[3/5] Demarrage du serveur Ollama
+
+[4/5] Donnees, modele principal qwen3:4b et diagnostic complet
+Diagnostic Vigenere-Squad — Windows 11, Python 3.12.16
+[ OK ]       Python : 3.12.16
+[ OK ]       Données : textes sources vérifiés (SHA-256), modèles de langue et corpus présents
+[ OK ]       Outils de cryptanalyse : Vigenere casse en 0.08 s (cle ROUTE)
+[ OK ]       Serveur Ollama : version 0.40.16 sur http://127.0.0.1:11434
+[ OK ]       Modèle qwen3:4b : installé (modèle local, aucun compte Ollama nécessaire)
+[ OK ]       Vitesse du modèle : 20.6 jetons/s en génération, JSON valide
+
+[5/5] Tous les modeles de l'evaluation (qwen3:4b, qwen3:1.7b, qwen3:0.6b) et epinglage des empreintes
+qwen3:4b -> 359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7
+qwen3:1.7b -> 8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7
+qwen3:0.6b -> 7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435
+
+================================================================
+ Installation terminee. Pour utiliser le projet : double-cliquer sur lancer.bat
+================================================================

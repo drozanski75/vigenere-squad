@@ -1,0 +1,19 @@
+Votre choix : 1
+Diagnostic Vigenere-Squad — Windows 11, Python 3.12.16
+------------------------------------------------------------------------
+[ OK ]       Python : 3.12.16
+[ OK ]       Dossier du projet : C:\Users\dawid\Downloads\vigenere-squad-v11
+[ OK ]       Données : textes sources vérifiés (SHA-256), modèles de langue et corpus présents
+[ OK ]       Outils de cryptanalyse : Vigenere casse en 0.07 s (cle ROUTE)
+[ OK ]       Serveur Ollama : version 0.40.16 sur http://127.0.0.1:11434
+[ OK ]       Modèle qwen3:4b : installé (modèle local, aucun compte Ollama nécessaire)
+             mesure de la vitesse du modèle (premier chargement possible : 10-60 s)...
+[ OK ]       Vitesse du modèle : 23.0 jetons/s en génération, JSON valide (7 s avec chargement)
+[ATTENTION]  Processeur : 86 % GPU / 14 % CPU (le modèle déborde de la mémoire graphique)
+              -> les poids du modèle dépassent la mémoire graphique : fonctionnement normal mais plus lent ; qwen3:1.7b tiendrait entièrement sur le GPU (voir DEPANNAGE.md)
+[ OK ]       Mémoire vive : 15.3 Go
+[ OK ]       Espace disque : 97 Go libres
+------------------------------------------------------------------------
+Tout est prêt. Essai : uv run vsquad casser --fichier exemple_chiffre.txt --expliquer
+
+Appuyez sur une touche pour continuer...
