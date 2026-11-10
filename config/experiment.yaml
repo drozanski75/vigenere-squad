@@ -1,0 +1,90 @@
+# Paramètres déclarés de l'expérience (lus par `make reproduce`).
+# Toute valeur citée dans le rapport provient de results/metrics.json,
+# produit à partir de ces paramètres.
+
+graine: 42
+repetitions: 3                 # chaque mesure dépendant du modèle est répétée 3 fois
+langue: fr
+
+environnement_execution:
+  ollama_version_testee: "0.12.x"   # remplacée par la version réelle dans results/ENVIRONMENT.json
+  hote: "http://127.0.0.1:11434"
+
+# Étude d'ablation : (a) sans LLM, (b) modèle exécutable sur 8 Go, (c) second modèle de taille différente
+configurations:
+  a_baseline:
+    type: baseline
+  b_qwen3_4b:
+    type: agents
+    modele: "qwen3:4b"
+    digest: "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7"       # rempli par `make models` (scripts/epingler_modeles.py)
+    temperature: 0.3
+    contexte: 2048
+    jetons_max: 256
+  c_qwen3_1.7b:
+    type: agents
+    modele: "qwen3:1.7b"
+    digest: "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7"
+    temperature: 0.3
+    contexte: 2048
+    jetons_max: 256
+
+# Modèle de très petite taille pour l'intégration continue (make reproduce-small)
+ci:
+  modele: "qwen3:0.6b"
+  digest: "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435"
+  par_cellule: 1
+  procedes: [cesar, vigenere, autoclave]
+  longueurs: [300, 1000]
+  repetitions: 1
+
+corpus:
+  par_cellule: 5                 # 6 procédés x 6 longueurs x 5 = 180 chiffrés par variante
+  longueurs: [80, 150, 300, 600, 1000, 2000]
+
+orchestrateur:
+  iterations_max: 6              # une par procédé : la boucle peut toujours tous les essayer
+  seuil_garde_fou: 0.65        # mesuré : bons clairs >= 0,70 ; faux clairs <= 0,62 (80 lettres), <= 0,48 (150)
+  seuil_repli: 0.70
+  reessais: 2
+  tours_max: 3
+  delai_outil_s: 120
+  delai_llm_s: 180
+  contraindre_outils: true
+
+experiences:
+  principal:
+    variante: standard
+    par_cellule_agents: 1        # sous-ensemble stratifié évalué par les agents : 6 procédés x 6 longueurs = 36
+                                 # chiffrés x 3 répétitions (la référence (a) est évaluée sur les 180)
+    longueurs_agents: null       # toutes les longueurs
+  robustesse:
+    variantes: [sans_espaces, fautes5, anglais]
+    configurations: [a_baseline, b_qwen3_4b]
+    par_cellule_agents: 1
+    longueurs_agents: [150, 600] # agents : 6 procédés x 2 longueurs = 12 chiffrés par variante (référence : 180)
+  defaillances:
+    configuration: b_qwen3_4b
+    taux_fautes_llm: 0.25
+    taux_fautes_outils: 0.15
+    par_cellule: 1
+    longueurs: [150, 600]        # 12 chiffrés
+    repetitions: 3
+  injection:                     # modèle de menace M1/M2 : consigne malveillante dans une sortie d'outil
+    configuration: b_qwen3_4b
+    procedes: [autoclave, beaufort, substitution]   # procédés où des candidats faux sont examinés
+    par_cellule: 1
+    longueurs: [150, 600, 2000]  # 9 chiffrés x 3 répétitions
+  explications:
+    configuration: b_qwen3_4b
+    nombre: 10                   # tirées au hasard (graine) parmi le corpus principal, notées par grille
+  shannon:
+    longueurs_cle: [3, 4, 5, 6, 8, 10, 12]
+    longueurs_texte: [20, 30, 40, 60, 80, 100, 150, 200, 300, 400, 600]
+    echantillons: 20
+  longueur_min:                  # longueur minimale de succès à 90 % (en lettres) pour chaque procédé
+    longueurs_texte: [20, 30, 40, 60, 80, 100, 150, 200, 300, 400, 600, 800, 1000, 1500, 2000]
+    echantillons: 20             # attaque adaptée, procédé connu
+    echantillons_reference: 10   # référence (a), procédé inconnu
+  kasiski_autoclave:
+    par_cellule: 5
