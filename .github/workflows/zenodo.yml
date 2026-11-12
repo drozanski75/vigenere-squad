@@ -16,13 +16,28 @@ jobs:
       - name: DOI et SHA-256 de l'archive Zenodo
         run: |
           python3 - <<'PY'
-          import hashlib, json, os, urllib.request, urllib.parse
+          import hashlib, json, os, time, urllib.request, urllib.parse
           v = "${{ inputs.version }}"
-          q = urllib.parse.quote('"drozanski75/vigenere-squad"')
-          url = f"https://zenodo.org/api/records?q={q}&sort=mostrecent&size=20&all_versions=true"
-          recs = json.load(urllib.request.urlopen(url, timeout=60))["hits"]["hits"]
-          print("enregistrements :", [(r["metadata"].get("version"), r.get("doi")) for r in recs])
-          r = next(r for r in recs if r["metadata"].get("version") in (v, v.lstrip("v")))
+          def chercher():
+              vus = {}
+              for q in ['"drozanski75/vigenere-squad"', 'vigenere-squad', 'Vigenère-Squad', 'creators.name:Rozanski']:
+                  url = "https://zenodo.org/api/records?" + urllib.parse.urlencode(
+                      {"q": q, "sort": "mostrecent", "size": 25, "all_versions": "true"})
+                  for r in json.load(urllib.request.urlopen(url, timeout=60))["hits"]["hits"]:
+                      vus[r["id"]] = r
+              return list(vus.values())
+          r = None
+          for essai in range(20):  # Zenodo met quelques minutes à archiver une release
+              recs = chercher()
+              print("enregistrements :", [(x["metadata"].get("title", "")[:40], x["metadata"].get("version"), x.get("doi")) for x in recs])
+              cand = [x for x in recs if x["metadata"].get("version") in (v, v.lstrip("v"))
+                      and "igen" in x["metadata"].get("title", "").lower()]
+              if cand:
+                  r = cand[0]
+                  break
+              time.sleep(30)
+          if r is None:
+              raise SystemExit("enregistrement Zenodo introuvable pour " + v)
           f = r["files"][0]
           data = urllib.request.urlopen(f["links"]["self"], timeout=600).read()
           res = {"version": v, "doi": r["doi"], "doi_url": "https://doi.org/" + r["doi"], "record": r["links"]["html"],
