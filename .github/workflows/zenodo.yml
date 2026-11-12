@@ -8,6 +8,9 @@ on:
       version:
         description: "version (tag)"
         default: "v1.0.0"
+      enregistrement:
+        description: "numéro d'enregistrement Zenodo (facultatif, ex. 24155159)"
+        default: ""
 
 jobs:
   zenodo:
@@ -27,7 +30,9 @@ jobs:
                       vus[r["id"]] = r
               return list(vus.values())
           r = None
-          for essai in range(20):  # Zenodo met quelques minutes à archiver une release
+          if "${{ inputs.enregistrement }}":
+              r = json.load(urllib.request.urlopen("https://zenodo.org/api/records/${{ inputs.enregistrement }}", timeout=60))
+          for essai in range(0 if r else 20):  # Zenodo met quelques minutes à archiver une release
               recs = chercher()
               print("enregistrements :", [(x["metadata"].get("title", "")[:40], x["metadata"].get("version"), x.get("doi")) for x in recs])
               cand = [x for x in recs if x["metadata"].get("version") in (v, v.lstrip("v"))
