@@ -45,7 +45,7 @@ jobs:
               raise SystemExit("enregistrement Zenodo introuvable pour " + v)
           f = r["files"][0]
           data = urllib.request.urlopen(f["links"]["self"], timeout=600).read()
-          res = {"version": v, "doi": r["doi"], "doi_url": "https://doi.org/" + r["doi"], "record": r["links"]["html"],
+          res = {"version": v, "doi": r["doi"], "doi_url": "https://doi.org/" + r["doi"], "record": r["links"].get("self_html") or r["links"].get("html") or "https://zenodo.org/records/" + str(r["id"]),
                  "fichier": f["key"], "taille": len(data), "sha256": hashlib.sha256(data).hexdigest(),
                  "md5_zenodo": f.get("checksum")}
           print("RESULTAT", json.dumps(res))
