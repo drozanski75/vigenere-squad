@@ -292,12 +292,7 @@ connue » et « longueur inconnue » mesure le coût de l'estimation de $L$
 
 ## Apport mesuré des agents
 
-> **À compléter par l'auteur après exécution** : interpréter le tableau
-> d'ablation. Points attendus : l'écart de taux de succès agents/référence sur
-> le même sous-ensemble est-il supérieur à deux écarts types ? Sur quels
-> procédés les agents gagnent-ils (ordre des hypothèses, choix des longueurs) ou
-> perdent-ils (Linguiste qui rejette un bon clair, conclusions invalides
-> menant à des replis) ? Le surcoût en temps est-il justifié par l'explication ?
+{{analyse_ablation}}
 
 Indépendamment des chiffres, deux mécanismes structurent le résultat. D'une
 part, la référence (a) dispose déjà des mêmes outils et d'un critère d'arrêt
@@ -311,16 +306,17 @@ sources.
 
 ## Effet de la taille du modèle
 
-> **À compléter** : comparer b et c (taux de succès, taux de repli, erreurs de
-> format, durée).
+{{analyse_taille}}
 
 ## Limites
 
 * Sous-ensemble réduit pour les agents (coût CPU) ; la référence couvre tout le corpus.
 * Critère « clair exact » strict pour la substitution (lettres rares) ; la
   précision par lettre est publiée en complément.
-* Les explications sont notées par l'auteur seul ; une évaluation à l'aveugle
-  par plusieurs correcteurs serait préférable.
+* Les explications n'ont pas été notées à la main avec la grille (délai) : seuls les
+  indicateurs automatiques sont publiés (exercices vérifiés par les outils).
+* L'évaluation a été exécutée sur des serveurs GitHub Actions (CPU, sans GPU) ; les durées
+  par chiffré y sont plus longues que sur la machine de l'auteur.
 * Le modèle de langue des outils est appris sur trois romans du XIX^e^ siècle ;
   un style très différent dégraderait la plausibilité.
 

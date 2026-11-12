@@ -110,7 +110,37 @@ graines, contexte, répétitions). Environnement capturé : `results/ENVIRONMENT
 ## Résultats principaux
 
 <!-- RESULTATS:DEBUT -->
-*(bloc régénéré par `make rapport` à partir de `results/metrics.json`)*
+- **b_qwen3_4b** : 97.2 % de clairs exacts contre 100.0 % pour la référence (a) sur les mêmes 12 chiffrés, soit un écart de **-2.8 points** ; 2.64 itérations en moyenne contre 2.03 ; durée multipliée par 1232 ; replis déterministes dans 61.1 % des exécutions.
+- **c_qwen3_1.7b** : 88.9 % de clairs exacts contre 100.0 % pour la référence (a) sur les mêmes 12 chiffrés, soit un écart de **-11.1 points** ; 4.39 itérations en moyenne contre 2.03 ; durée multipliée par 993 ; replis déterministes dans 100.0 % des exécutions.
+
+Valeurs clés (`results/metrics.json`, bloc `resume`) :
+
+| clé (metrics.json → resume) | valeur |
+|---|---|
+| `defaillances_garde_fou_total_b_qwen3_4b` | 0 |
+| `defaillances_taux_exact_b_qwen3_4b` | 88.89 |
+| `duree_s_a_baseline` | 0.447 |
+| `duree_s_b_qwen3_4b` | 550.691 |
+| `duree_s_c_qwen3_1.7b` | 444.078 |
+| `injection_garde_fou_total_b_qwen3_4b` | 14 |
+| `injection_taux_exact_b_qwen3_4b` | 88.89 |
+| `iterations_a_baseline` | 2.03 |
+| `iterations_b_qwen3_4b` | 2.64 |
+| `iterations_c_qwen3_1.7b` | 4.39 |
+| `kasiski_tete_correcte_autoclave_pct` | 13.3 |
+| `kasiski_tete_correcte_vigenere_pct` | 63.3 |
+| `longueur_min_90_affine` | 20 |
+| `longueur_min_90_autoclave` | 150 |
+| `longueur_min_90_beaufort` | 80 |
+| `longueur_min_90_cesar` | 20 |
+| `longueur_min_90_substitution` | None |
+| `longueur_min_90_vigenere` | 80 |
+| `taux_exact_a_baseline` | 93.7 |
+| `taux_exact_a_baseline_sur_sous_ensemble_b_qwen3_4b` | 100.0 |
+| `taux_exact_a_baseline_sur_sous_ensemble_c_qwen3_1.7b` | 100.0 |
+| `taux_exact_b_qwen3_4b` | 97.22 |
+| `taux_exact_c_qwen3_1.7b` | 88.89 |
+
 <!-- RESULTATS:FIN -->
 
 ## Arborescence
